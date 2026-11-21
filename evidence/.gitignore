@@ -1,0 +1,5 @@
+# generated evidence, local runtime state and secrets: never commit
+output/
+output_headed/
+.run/
+node_modules/
