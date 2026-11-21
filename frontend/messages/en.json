@@ -1,5 +1,5 @@
 {
- "common.app": "The Ward Ledger",
+ "common.app": "Apla Shaar",
  "common.tagline": "Follow the rupee: where Mumbai's monsoon road money went",
  "common.demo": "Demo data: all records are synthetic and all contractors are fictional.",
  "common.loading": "Loading…",
@@ -588,5 +588,23 @@
  "score.howTitle": "How the score is calculated",
  "score.howBody": "Score = {d}% × fixes that held beyond 30 days + {s}% × jobs finished on time + {b}% × bills matching the standard rate. Durability and on-time are compared with what is expected for the same mix of urgent jobs, repair methods, low-lying wards and heavy-rain weeks, so a contractor given harder work is not marked down for it. Based on {n} recorded repairs{app}. Only the contractor's own recorded work is used; no one's opinion is.",
  "score.howApp": " plus {n} task(s) handled through this app",
- "score.replyNote": "Contractors can reply to any finding; the reply is shown next to it."
+ "score.replyNote": "Contractors can reply to any finding; the reply is shown next to it.",
+ "home.eyebrow1": "EXPENDITURE AUDIT",
+ "home.eyebrow2": "DURABILITY CHECK",
+ "home.eyebrow3": "COMPLAINT TRACKER",
+ "home.slide1.title": "Where did your tax money go? Track every rupee in public road repairs.",
+ "home.slide1.sub": "Follow audit trails, ward expenditure, and contractor accountability in real time across Mumbai.",
+ "home.slide2.title": "Did the fix last? See which repairs failed within 30 days.",
+ "home.slide2.sub": "Compare what each ward spent on repairs that had to be redone, with the source record for every number.",
+ "home.slide3.title": "Raised a complaint? Follow it from ticket to repair.",
+ "home.slide3.sub": "Enter your complaint ID to see who was assigned, what it cost, and whether the road is still under warranty.",
+ "home.slideOf": "Slide {n} of {total}",
+ "home.prev": "Previous slide",
+ "home.next": "Next slide",
+ "home.selectWard": "Select ward…",
+ "contractors.synthetic": "(synthetic)",
+ "contractors.search": "Search contractors…",
+ "contractors.cleanOnly": "Clean Record Only",
+ "contractors.viewAudit": "View audit profile",
+ "contractors.none": "No contractors match."
 }

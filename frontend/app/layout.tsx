@@ -6,14 +6,14 @@ import { AuthProvider } from "@/lib/auth";
 import Shell from "@/components/Shell";
 
 export const metadata: Metadata = {
-  title: "The Ward Ledger",
+  title: "Apla Shaar",
   description: "Follow the rupee: where Mumbai monsoon road repair money went. Demo data: all records are synthetic.",
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="mr">
       <body>
         <LangProvider>
           <AuthProvider>

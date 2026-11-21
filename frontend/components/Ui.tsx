@@ -28,8 +28,30 @@ export function ErrorBox({ error, onRetry }: { error: ApiError | Error; onRetry?
   );
 }
 
-export function Stat({ label, value, sub, tone }: { label: string; value: ReactNode; sub?: ReactNode; tone?: "warn" | "good" }) {
+export function Stat({
+  label,
+  value,
+  sub,
+  tone,
+  plain,
+}: {
+  label: string;
+  value: ReactNode;
+  sub?: ReactNode;
+  tone?: "warn" | "good";
+  /** Roomy card without the coloured left accent bar (used on the home page). */
+  plain?: boolean;
+}) {
   const border = tone === "warn" ? "border-l-amber-500" : tone === "good" ? "border-l-emerald-600" : "border-l-ledger-600";
+  if (plain) {
+    return (
+      <div className="card flex min-h-[150px] flex-col p-6">
+        <div className="text-sm text-ink/70">{label}</div>
+        <div className="mt-2 font-display text-4xl font-bold tabular-nums tracking-tight">{value}</div>
+        {sub && <div className="mt-auto pt-4 font-mono text-xs text-ink/55">{sub}</div>}
+      </div>
+    );
+  }
   return (
     <div className={`card border-l-4 ${border}`}>
       <div className="text-xs font-medium text-ledger-700">{label}</div>
@@ -42,8 +64,8 @@ export function Stat({ label, value, sub, tone }: { label: string; value: ReactN
 export function PageTitle({ children, sub }: { children: ReactNode; sub?: ReactNode }) {
   return (
     <div className="mb-3">
-      <h1 className="text-2xl font-extrabold leading-tight">{children}</h1>
-      {sub && <p className="mt-1 text-sm text-ink/70">{sub}</p>}
+      <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-[44px]">{children}</h1>
+      {sub && <p className="mt-3 max-w-3xl text-lg text-ink/70">{sub}</p>}
     </div>
   );
 }
