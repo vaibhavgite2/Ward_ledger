@@ -6,7 +6,7 @@ import { AuthProvider } from "@/lib/auth";
 import Shell from "@/components/Shell";
 
 export const metadata: Metadata = {
-  title: "Apla Shaar",
+  title: "Apla Shahar",
   description: "Follow the rupee: where Mumbai monsoon road repair money went. Demo data: all records are synthetic.",
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };

@@ -9,7 +9,7 @@ import sys
 
 M = {
     # ---- common / shell
-    "common.app": ("Apla Shaar", "Apla Shaar", "Apla Shaar"),
+    "common.app": ("Apla Shahar", "Apla Shahar", "Apla Shahar"),
     "common.tagline": ("Follow the rupee: where Mumbai's monsoon road money went", "रुपयाचा मागोवा: मुंबईच्या पावसाळी रस्ते दुरुस्तीचा पैसा कुठे गेला", "रुपये का पीछा: मुंबई के मानसून सड़क मरम्मत का पैसा कहाँ गया"),
     "common.demo": ("Demo data: all records are synthetic and all contractors are fictional.", "डेमो डेटा: सर्व नोंदी कृत्रिम आहेत आणि सर्व कंत्राटदार काल्पनिक आहेत.", "डेमो डेटा: सभी रिकॉर्ड कृत्रिम हैं और सभी ठेकेदार काल्पनिक हैं।"),
     "common.loading": ("Loading…", "लोड होत आहे…", "लोड हो रहा है…"),
