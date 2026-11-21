@@ -5,6 +5,8 @@ rem  The Ward Ledger - one-shot developer environment setup
 rem  Usage:  setup.bat            set everything up
 rem          setup.bat --test     set up, then run backend + frontend checks
 rem          setup.bat --start    set up, then launch both servers
+rem          setup.bat --test --start   flags can be combined
+rem          setup.bat --help     show this usage
 rem  Safe to re-run: every step skips work that is already done.
 rem ============================================================
 
@@ -15,8 +17,17 @@ set "FRONTEND=%ROOT%\frontend"
 set "VENV_PY=%BACKEND%\.venv\Scripts\python.exe"
 set "DO_TEST=0"
 set "DO_START=0"
-if /I "%~1"=="--test"  set "DO_TEST=1"
-if /I "%~1"=="--start" set "DO_START=1"
+
+:parse_args
+if "%~1"=="" goto :args_done
+if /I "%~1"=="--test"  (set "DO_TEST=1"  & shift & goto :parse_args)
+if /I "%~1"=="--start" (set "DO_START=1" & shift & goto :parse_args)
+if /I "%~1"=="--help"  goto :usage
+if /I "%~1"=="-h"      goto :usage
+if /I "%~1"=="/?"      goto :usage
+echo [ERROR] Unknown option: %~1
+goto :usage_fail
+:args_done
 
 echo.
 echo === [1/7] Checking prerequisites ===
@@ -107,6 +118,19 @@ xcopy /Y /Q "%TMPDIR%\data\*" "%ROOT%\data\" >nul || exit /b 1
 rmdir /S /Q "%TMPDIR%"
 echo   dataset copied to data\
 exit /b 0
+
+:usage
+echo Usage: setup.bat [--test] [--start] [--help]
+echo   (no flags)  set up data, backend venv, database and frontend
+echo   --test      after setup, run pytest, the i18n check and tsc
+echo   --start     after setup, launch the API and UI in new windows
+endlocal
+exit /b 0
+
+:usage_fail
+echo Usage: setup.bat [--test] [--start] [--help]
+endlocal
+exit /b 1
 
 :fail
 echo.
