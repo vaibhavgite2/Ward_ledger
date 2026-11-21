@@ -1,21 +1,53 @@
-# dataset (fetched by scripts/fetch_data.sh; CC BY 4.0, not redistributed here)
+# dataset (fetched by scripts/fetch_data.sh or setup.bat; CC BY 4.0, not redistributed here)
 data/
 
-# backend
+# backend (Python)
 backend/.venv/
 backend/ward_ledger.db*
 backend/.cache/
+.venv/
+venv/
 *.egg-info/
 __pycache__/
+*.py[cod]
 .pytest_cache/
-*.pyc
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
 
-# frontend
+# frontend (Next.js / Node)
 frontend/node_modules/
 frontend/.next/
+frontend/out/
 frontend/next-env.d.ts
 frontend/*.tsbuildinfo
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# secrets
+# secrets and local config (keep the *.example templates tracked)
 .env
-.env.local
+.env.*
+!.env.example
+*.pem
+*.key
+
+# logs and temp files
+*.log
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Claude Code local settings
+.claude/settings.local.json
