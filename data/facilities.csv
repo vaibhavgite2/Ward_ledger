@@ -1,0 +1,161 @@
+facility_id,type,name,ward_code,lat,lon,beds_or_students,emergency_services,ambulance_entry_road
+HS001,Hospital,KEM Hospital,F/S,19.0024,72.842,600,Y,RD0058
+HS002,Hospital,LTMG Sion Hospital,F/N,19.037,72.861,1400,Y,RD0076
+HS003,Hospital,BYL Nair Hospital,E,18.972,72.822,250,Y,RD0055
+HS004,Hospital,Sir JJ Hospital,B,18.963,72.834,250,Y,RD0012
+HS005,Hospital,HBT Trauma / Cooper Hospital,K/W,19.107,72.837,400,Y,RD0154
+HS006,Hospital,KB Bhabha Hospital Bandra,H/W,19.06,72.836,1400,Y,RD0121
+HS007,Hospital,Rajawadi Hospital,N,19.078,72.905,250,Y,RD0251
+HS008,Hospital,Shatabdi Hospital Govandi,M/E,19.059,72.92,400,Y,RD0231
+HS009,Hospital,Shatabdi Hospital Kandivali,R/S,19.208,72.85,900,Y,RD0190
+HS010,Hospital,Bhagwati Hospital Borivali,R/C,19.232,72.855,250,Y,RD0203
+HS011,Hospital,MT Agarwal Hospital Mulund,T,19.172,72.953,400,Y,RD0291
+HS012,Hospital,Tata Memorial Hospital,F/S,19.004,72.844,900,Y,RD0058
+HS013,Hospital,Wadia Children's Hospital,F/S,19.003,72.84,900,Y,RD0065
+HS014,Hospital,KB Bhabha Hospital Kurla,L,19.07,72.88,900,Y,RD0216
+HS015,Hospital,Siddharth Hospital Goregaon,P/S,19.165,72.849,250,Y,RD0169
+HS016,Hospital,Trauma Care Centre Jogeshwari,K/E,19.135,72.858,1400,Y,RD0138
+HS017,Hospital,Mahim Fever Hospital (synthetic),G/N,19.041,72.841,1400,Y,RD0094
+HS018,Hospital,Bhandup Maternity Home,S,19.146,72.935,250,Y,RD0273
+SC001,School,Municipal Secondary School Fort No 2 (synthetic),A,18.920284,72.843882,1487,N,RD0008
+SC002,School,Municipal Secondary School Colaba No 8 (synthetic),A,18.925227,72.836021,1210,N,RD0009
+SC003,School,BMC Urdu Medium School Fort No 5 (synthetic),A,18.914189,72.838575,1899,N,RD0011
+SC004,School,BMC Urdu Medium School Churchgate No 7 (synthetic),A,18.907871,72.819342,2035,N,RD0001
+SC005,School,BMC Public School Nariman Point No 8 (synthetic),A,18.929242,72.825369,1132,N,RD0003
+SC006,School,BMC Marathi Medium School Umerkhadi No 9 (synthetic),C,18.954288,72.829057,1314,N,RD0024
+SC007,School,BMC Urdu Medium School Sandhurst Road No 8 (synthetic),B,18.942077,72.839157,334,N,RD0027
+SC008,School,BMC Public School Masjid Bunder No 1 (synthetic),B,18.963882,72.841078,1460,N,RD0013
+SC009,School,BMC Hindi Medium School Umerkhadi No 2 (synthetic),B,18.958197,72.833979,2133,N,RD0012
+SC010,School,Municipal Secondary School Dongri No 5 (synthetic),B,18.957818,72.832411,1277,N,RD0012
+SC011,School,BMC Hindi Medium School Masjid Bunder No 4 (synthetic),B,18.967292,72.840305,1486,N,RD0014
+SC012,School,BMC Hindi Medium School Umerkhadi No 4 (synthetic),B,18.958284,72.835191,1062,N,RD0012
+SC013,School,BMC Marathi Medium School Girgaon No 4 (synthetic),A,18.933643,72.829391,1935,N,RD0004
+SC014,School,BMC Public School Bhuleshwar No 6 (synthetic),B,18.952559,72.838638,804,N,RD0016
+SC015,School,BMC Marathi Medium School Kalbadevi No 9 (synthetic),C,18.944012,72.823841,571,N,RD0030
+SC016,School,BMC Public School Girgaon No 8 (synthetic),C,18.938769,72.823223,1726,N,RD0030
+SC017,School,BMC Hindi Medium School Kalbadevi No 4 (synthetic),C,18.95219,72.827381,2200,N,RD0023
+SC018,School,BMC Marathi Medium School Kalbadevi No 9 (synthetic),C,18.948716,72.83119,1637,N,RD0025
+SC019,School,Municipal Secondary School Marine Lines No 4 (synthetic),D,18.950086,72.813798,1547,N,RD0044
+SC020,School,BMC Marathi Medium School Nana Chowk No 6 (synthetic),C,18.957581,72.822051,712,N,RD0032
+SC021,School,Municipal Secondary School Peddar Road No 5 (synthetic),D,18.95289,72.804458,444,N,RD0037
+SC022,School,BMC Urdu Medium School Grant Road No 1 (synthetic),D,18.962347,72.813968,778,N,RD0036
+SC023,School,BMC Hindi Medium School Malabar Hill No 7 (synthetic),D,18.951274,72.798128,528,N,RD0037
+SC024,School,BMC Urdu Medium School Grant Road No 6 (synthetic),D,18.963625,72.801897,821,N,RD0041
+SC025,School,BMC Hindi Medium School Nagpada No 6 (synthetic),E,18.968155,72.833608,1136,N,RD0057
+SC026,School,BMC Public School Nagpada No 6 (synthetic),E,18.974087,72.836854,467,N,RD0057
+SC027,School,BMC Hindi Medium School Agripada No 7 (synthetic),E,18.972442,72.834796,1621,N,RD0057
+SC028,School,BMC Public School Agripada No 6 (synthetic),E,18.973204,72.833327,1304,N,RD0056
+SC029,School,BMC Hindi Medium School Agripada No 9 (synthetic),E,18.968336,72.834745,1668,N,RD0057
+SC030,School,BMC Hindi Medium School Byculla No 1 (synthetic),E,18.972153,72.831588,2167,N,RD0056
+SC031,School,BMC Public School Dadar East No 1 (synthetic),F/S,19.008192,72.849126,2004,N,RD0068
+SC032,School,Municipal Secondary School Sewri No 6 (synthetic),F/S,18.999166,72.842807,568,N,RD0066
+SC033,School,BMC Public School Parel No 7 (synthetic),F/S,19.006216,72.845377,1758,N,RD0058
+SC034,School,BMC Urdu Medium School Parel No 4 (synthetic),F/S,19.002377,72.836333,636,N,RD0065
+SC035,School,BMC Marathi Medium School Parel No 3 (synthetic),F/S,18.993742,72.839631,563,N,RD0067
+SC036,School,BMC Marathi Medium School Hindmata No 9 (synthetic),G/S,19.001472,72.823471,1326,N,RD0087
+SC037,School,Municipal Secondary School Hindmata No 3 (synthetic),F/S,18.996409,72.830501,1549,N,RD0062
+SC038,School,BMC Public School Matunga No 2 (synthetic),F/N,19.025632,72.863667,1723,N,RD0080
+SC039,School,BMC Urdu Medium School Sion No 6 (synthetic),F/N,19.039167,72.870529,1588,N,RD0074
+SC040,School,BMC Marathi Medium School Matunga No 2 (synthetic),F/N,19.026782,72.859269,1622,N,RD0071
+SC041,School,BMC Public School Antop Hill No 4 (synthetic),F/N,19.021359,72.875751,810,N,RD0079
+SC042,School,BMC Urdu Medium School Elphinstone No 3 (synthetic),G/S,19.000252,72.827027,1011,N,RD0091
+SC043,School,BMC Marathi Medium School Elphinstone No 9 (synthetic),G/S,18.994461,72.817345,835,N,RD0089
+SC044,School,BMC Hindi Medium School Worli No 3 (synthetic),G/S,18.998011,72.819738,360,N,RD0088
+SC045,School,Municipal Secondary School Prabhadevi No 2 (synthetic),G/S,18.999163,72.819637,701,N,RD0087
+SC046,School,BMC Hindi Medium School Elphinstone No 1 (synthetic),G/S,18.996345,72.824516,1741,N,RD0089
+SC047,School,BMC Public School Worli No 4 (synthetic),G/S,19.006499,72.820715,1219,N,RD0084
+SC048,School,BMC Marathi Medium School Elphinstone No 6 (synthetic),G/S,19.00186,72.823322,2070,N,RD0087
+SC049,School,BMC Marathi Medium School Elphinstone No 2 (synthetic),G/S,18.992958,72.821502,1708,N,RD0090
+SC050,School,BMC Public School Dharavi No 1 (synthetic),G/N,19.035392,72.845912,1351,N,RD0100
+SC051,School,BMC Hindi Medium School Dadar West No 2 (synthetic),G/N,19.033742,72.846821,2076,N,RD0100
+SC052,School,BMC Marathi Medium School Dadar West No 9 (synthetic),G/N,19.035774,72.848365,1116,N,RD0105
+SC053,School,BMC Urdu Medium School Matunga Labour Camp No 5 (synthetic),G/N,19.044706,72.837834,704,N,RD0094
+SC054,School,BMC Hindi Medium School Mahim No 7 (synthetic),G/N,19.040919,72.850402,816,N,RD0101
+SC055,School,BMC Public School Dadar West No 8 (synthetic),G/N,19.045482,72.844573,549,N,RD0101
+SC056,School,BMC Hindi Medium School Kalanagar No 5 (synthetic),H/E,19.05707,72.855951,416,N,RD0115
+SC057,School,BMC Urdu Medium School Kherwadi No 3 (synthetic),H/E,19.06017,72.861804,1359,N,RD0115
+SC058,School,BMC Public School Bandra East No 2 (synthetic),H/E,19.06259,72.851726,1438,N,RD0110
+SC059,School,BMC Urdu Medium School Santacruz East No 7 (synthetic),H/E,19.066669,72.846582,724,N,RD0110
+SC060,School,Municipal Secondary School Bandra East No 6 (synthetic),H/E,19.068117,72.863038,1463,N,RD0111
+SC061,School,Municipal Secondary School Khar West No 3 (synthetic),H/W,19.054994,72.819896,662,N,RD0127
+SC062,School,BMC Marathi Medium School Khar West No 3 (synthetic),H/W,19.061631,72.82176,1762,N,RD0127
+SC063,School,BMC Urdu Medium School Pali Hill No 5 (synthetic),H/W,19.070467,72.822094,456,N,RD0128
+SC064,School,Municipal Secondary School Khar West No 7 (synthetic),H/W,19.055962,72.814529,1556,N,RD0127
+SC065,School,Municipal Secondary School Chakala No 9 (synthetic),K/E,19.125904,72.856124,1533,N,RD0146
+SC066,School,BMC Marathi Medium School Jogeshwari East No 4 (synthetic),K/E,19.114083,72.866059,1468,N,RD0131
+SC067,School,BMC Urdu Medium School Marol No 2 (synthetic),K/E,19.110768,72.87104,595,N,RD0136
+SC068,School,BMC Marathi Medium School Marol No 7 (synthetic),K/E,19.11117,72.859472,1903,N,RD0130
+SC069,School,Municipal Secondary School Saki Naka No 4 (synthetic),K/E,19.128828,72.861145,1064,N,RD0138
+SC070,School,BMC Urdu Medium School Saki Naka No 2 (synthetic),K/E,19.12014,72.866581,1049,N,RD0138
+SC071,School,BMC Urdu Medium School Oshiwara No 9 (synthetic),K/W,19.116264,72.824014,1800,N,RD0153
+SC072,School,Municipal Secondary School Juhu No 7 (synthetic),K/W,19.127825,72.839548,940,N,RD0143
+SC073,School,BMC Public School Oshiwara No 7 (synthetic),K/W,19.112328,72.823545,828,N,RD0153
+SC074,School,BMC Urdu Medium School Versova No 3 (synthetic),K/W,19.120032,72.834691,583,N,RD0153
+SC075,School,BMC Marathi Medium School Andheri West No 4 (synthetic),K/W,19.126692,72.829628,1873,N,RD0150
+SC076,School,BMC Public School Bangur Nagar No 7 (synthetic),P/S,19.152521,72.83595,1112,N,RD0168
+SC077,School,BMC Hindi Medium School Bangur Nagar No 4 (synthetic),P/S,19.156565,72.845307,888,N,RD0167
+SC078,School,Municipal Secondary School Aarey Road No 2 (synthetic),P/S,19.157677,72.833742,1338,N,RD0166
+SC079,School,Municipal Secondary School Aarey Road No 8 (synthetic),P/S,19.162295,72.843776,733,N,RD0166
+SC080,School,BMC Urdu Medium School Goregaon East No 8 (synthetic),P/N,19.180066,72.858952,1598,N,RD0181
+SC081,School,Municipal Secondary School Goregaon East No 6 (synthetic),P/N,19.179587,72.856959,446,N,RD0181
+SC082,School,BMC Marathi Medium School Aarey Road No 3 (synthetic),P/S,19.157439,72.833758,1463,N,RD0166
+SC083,School,BMC Hindi Medium School Malad East No 6 (synthetic),P/N,19.179608,72.843099,1625,N,RD0176
+SC084,School,BMC Public School Malvani No 2 (synthetic),P/S,19.175709,72.846744,1933,N,RD0177
+SC085,School,Municipal Secondary School Kurar Village No 2 (synthetic),P/N,19.182273,72.8433,1038,N,RD0174
+SC086,School,BMC Urdu Medium School Malvani No 2 (synthetic),P/N,19.187201,72.843328,1726,N,RD0174
+SC087,School,BMC Urdu Medium School Malad East No 3 (synthetic),P/N,19.185855,72.842921,595,N,RD0174
+SC088,School,BMC Public School Malvani No 1 (synthetic),P/N,19.180592,72.839272,1430,N,RD0173
+SC089,School,BMC Marathi Medium School Marve Road No 9 (synthetic),P/N,19.188858,72.8424,1946,N,RD0174
+SC090,School,Municipal Secondary School Malad West No 3 (synthetic),P/N,19.182984,72.851135,957,N,RD0180
+SC091,School,BMC Urdu Medium School Poisar No 3 (synthetic),R/S,19.203042,72.863075,1530,N,RD0188
+SC092,School,BMC Public School Thakur Village No 5 (synthetic),R/S,19.20389,72.859348,370,N,RD0187
+SC093,School,BMC Public School Kandivali East No 1 (synthetic),R/S,19.206115,72.847947,342,N,RD0190
+SC094,School,Municipal Secondary School Thakur Village No 9 (synthetic),R/S,19.204865,72.852916,1952,N,RD0190
+SC095,School,BMC Marathi Medium School Kandivali East No 2 (synthetic),R/S,19.214601,72.837371,389,N,RD0190
+SC096,School,BMC Hindi Medium School Kandivali East No 2 (synthetic),R/S,19.214876,72.846855,447,N,RD0193
+SC097,School,BMC Hindi Medium School Magathane No 9 (synthetic),R/C,19.231331,72.860285,2015,N,RD0204
+SC098,School,BMC Marathi Medium School Gorai No 7 (synthetic),R/C,19.217469,72.867967,904,N,RD0208
+SC099,School,BMC Hindi Medium School IC Colony No 3 (synthetic),R/C,19.236857,72.855847,802,N,RD0200
+SC100,School,BMC Public School Borivali East No 5 (synthetic),R/C,19.238035,72.852307,952,N,RD0200
+SC101,School,BMC Marathi Medium School Borivali West No 4 (synthetic),R/C,19.226057,72.857411,2085,N,RD0206
+SC102,School,BMC Marathi Medium School Magathane No 4 (synthetic),R/C,19.224138,72.852202,1722,N,RD0206
+SC103,School,BMC Marathi Medium School Rawalpada No 9 (synthetic),R/N,19.263117,72.859415,1780,N,RD0213
+SC104,School,BMC Hindi Medium School Dahisar East No 7 (synthetic),R/N,19.257774,72.86383,518,N,RD0213
+SC105,School,BMC Urdu Medium School Anand Nagar No 3 (synthetic),R/C,19.237181,72.864751,764,N,RD0205
+SC106,School,BMC Marathi Medium School Rawalpada No 6 (synthetic),R/N,19.260269,72.867274,1500,N,RD0214
+SC107,School,BMC Hindi Medium School Dahisar East No 5 (synthetic),R/N,19.247153,72.858603,2096,N,RD0212
+SC108,School,BMC Public School Rawalpada No 7 (synthetic),R/N,19.267796,72.866383,507,N,RD0214
+SC109,School,BMC Urdu Medium School Nehru Nagar No 8 (synthetic),L,19.076916,72.873974,1004,N,RD0220
+SC110,School,BMC Hindi Medium School Kurla East No 9 (synthetic),L,19.075386,72.89124,1253,N,RD0219
+SC111,School,BMC Hindi Medium School Nehru Nagar No 6 (synthetic),L,19.06991,72.876638,2078,N,RD0216
+SC112,School,BMC Urdu Medium School Kurla East No 7 (synthetic),L,19.081736,72.877495,310,N,RD0220
+SC113,School,BMC Hindi Medium School Nehru Nagar No 7 (synthetic),L,19.079844,72.877128,740,N,RD0220
+SC114,School,BMC Public School Kurla East No 8 (synthetic),L,19.078216,72.890334,989,N,RD0220
+SC115,School,Municipal Secondary School Mankhurd No 6 (synthetic),M/E,19.052912,72.924058,1469,N,RD0229
+SC116,School,BMC Public School Trombay No 2 (synthetic),M/E,19.067634,72.926773,2160,N,RD0232
+SC117,School,Municipal Secondary School Trombay No 5 (synthetic),M/E,19.056861,72.926902,827,N,RD0233
+SC118,School,BMC Urdu Medium School Trombay No 1 (synthetic),M/E,19.063404,72.931253,1822,N,RD0237
+SC119,School,BMC Marathi Medium School Shivaji Nagar No 5 (synthetic),M/E,19.04903,72.915655,1824,N,RD0229
+SC120,School,BMC Marathi Medium School Tilak Nagar No 5 (synthetic),M/W,19.047164,72.903635,688,N,RD0245
+SC121,School,BMC Marathi Medium School Shell Colony No 4 (synthetic),M/W,19.055225,72.884104,1495,N,RD0226
+SC122,School,BMC Public School Chembur No 3 (synthetic),M/W,19.060268,72.904904,798,N,RD0250
+SC123,School,BMC Hindi Medium School Chembur No 4 (synthetic),M/W,19.05137,72.896936,799,N,RD0243
+SC124,School,BMC Marathi Medium School Asalpha No 9 (synthetic),N,19.089606,72.917337,1091,N,RD0255
+SC125,School,BMC Hindi Medium School Asalpha No 4 (synthetic),N,19.088279,72.904666,1570,N,RD0251
+SC126,School,BMC Public School Ghatkopar West No 7 (synthetic),N,19.084681,72.907291,591,N,RD0251
+SC127,School,BMC Hindi Medium School Pant Nagar No 4 (synthetic),N,19.091326,72.908442,1644,N,RD0261
+SC128,School,BMC Public School Kanjurmarg No 6 (synthetic),S,19.128938,72.93388,333,N,RD0272
+SC129,School,BMC Public School Bhandup West No 1 (synthetic),S,19.146199,72.924836,1477,N,RD0277
+SC130,School,BMC Marathi Medium School Bhandup East No 7 (synthetic),S,19.127894,72.934006,1614,N,RD0272
+SC131,School,BMC Urdu Medium School Nahur No 4 (synthetic),S,19.147391,72.92368,1904,N,RD0277
+SC132,School,Municipal Secondary School Kanjurmarg No 2 (synthetic),S,19.132925,72.936299,1969,N,RD0265
+SC133,School,BMC Marathi Medium School Bhandup East No 5 (synthetic),S,19.127425,72.936188,758,N,RD0265
+SC134,School,BMC Hindi Medium School Bhandup East No 8 (synthetic),S,19.134632,72.931839,1069,N,RD0265
+SC135,School,BMC Urdu Medium School Nahur West No 5 (synthetic),T,19.183747,72.961838,347,N,RD0283
+SC136,School,BMC Marathi Medium School Mulund East No 3 (synthetic),T,19.181632,72.955459,1029,N,RD0291
+SC137,School,BMC Urdu Medium School Mulund East No 1 (synthetic),T,19.187586,72.960287,1209,N,RD0291
+SC138,School,BMC Hindi Medium School Mulund East No 2 (synthetic),T,19.188745,72.961147,1641,N,RD0291
+SC139,School,BMC Urdu Medium School Mulund West No 3 (synthetic),T,19.170236,72.945978,1385,N,RD0280
+SC140,School,BMC Hindi Medium School Mulund West No 1 (synthetic),T,19.166361,72.951023,1571,N,RD0282
+SC141,School,BMC Marathi Medium School Nahur West No 4 (synthetic),T,19.172401,72.960671,420,N,RD0283
+SC142,School,BMC Marathi Medium School Mulund East No 1 (synthetic),T,19.182948,72.960342,1625,N,RD0283

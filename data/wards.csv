@@ -1,0 +1,25 @@
+ward_code,ward_name,zone,assistant_commissioner_office,centroid_lat,centroid_lon,approx_area_km2,population_est,low_lying_index,engineering_crews,localities,monsoon_repair_budget_inr_2025
+A,"Colaba, Fort, Churchgate",Zone 1,A Ward Office (synthetic),18.922,72.832,20.8,187095,0.35,9,Colaba; Cuffe Parade; Fort; Churchgate; Nariman Point,1600000
+B,"Dongri, Masjid Bunder",Zone 1,B Ward Office (synthetic),18.957,72.836,9.4,136401,0.55,5,Dongri; Masjid Bunder; Sandhurst Road; Umerkhadi,4300000
+C,"Kalbadevi, Bhuleshwar, Marine Lines",Zone 1,C Ward Office (synthetic),18.95,72.826,6.7,169381,0.45,11,Kalbadevi; Bhuleshwar; Marine Lines; Girgaon,900000
+D,"Grant Road, Malabar Hill, Tardeo",Zone 1,D Ward Office (synthetic),18.96,72.809,10.7,361830,0.4,9,Grant Road; Malabar Hill; Tardeo; Nana Chowk; Peddar Road,1600000
+E,"Byculla, Agripada, Mumbai Central",Zone 1,E Ward Office (synthetic),18.975,72.832,9.8,392894,0.7,12,Byculla; Agripada; Mumbai Central; Madanpura; Nagpada,5300000
+F/S,"Parel, Lalbaug, Sewri",Zone 2,F/S Ward Office (synthetic),19.0,72.842,15.1,342792,0.85,7,Parel; Lalbaug; Sewri; Hindmata; Dadar East,9800000
+F/N,"Matunga, Sion, Wadala",Zone 2,F/N Ward Office (synthetic),19.03,72.86,21.6,505104,0.9,6,Matunga; Sion; Wadala; Kings Circle; Antop Hill,10500000
+G/S,"Worli, Lower Parel, Prabhadevi",Zone 2,G/S Ward Office (synthetic),19.005,72.82,14.1,368840,0.6,11,Worli; Lower Parel; Prabhadevi; Elphinstone; Worli Naka,3200000
+G/N,"Dadar West, Mahim, Dharavi",Zone 2,G/N Ward Office (synthetic),19.04,72.843,11.7,572525,0.8,9,Dadar West; Mahim; Dharavi; Shivaji Park; Matunga Labour Camp,8400000
+H/E,"Bandra East, Santacruz East, Khar East",Zone 3,H/E Ward Office (synthetic),19.068,72.858,13.4,574530,0.75,10,Bandra East; Kalanagar; Santacruz East; Vakola; Kherwadi,8200000
+H/W,"Bandra West, Khar West, Santacruz West",Zone 3,H/W Ward Office (synthetic),19.065,72.83,20.0,316329,0.55,12,Bandra West; Khar West; Santacruz West; Pali Hill; Linking Road,4300000
+K/E,"Andheri East, Vile Parle East, Jogeshwari East",Zone 3,K/E Ward Office (synthetic),19.115,72.865,26.4,787678,0.65,6,Andheri East; Marol; Vile Parle East; Jogeshwari East; Chakala; Saki Naka,9100000
+K/W,"Andheri West, Juhu, Vile Parle West",Zone 4,K/W Ward Office (synthetic),19.125,72.835,29.7,772485,0.7,11,Andheri West; Juhu; Vile Parle West; Versova; Oshiwara; Lokhandwala,8900000
+P/S,Goregaon,Zone 4,P/S Ward Office (synthetic),19.165,72.848,30.3,471570,0.5,9,Goregaon West; Goregaon East; Aarey Road; Bangur Nagar,4800000
+P/N,Malad,Zone 4,P/N Ward Office (synthetic),19.188,72.845,17.9,935709,0.6,11,Malad West; Malad East; Malvani; Marve Road; Kurar Village,7700000
+R/S,Kandivali,Zone 7,R/S Ward Office (synthetic),19.207,72.852,24.7,701172,0.5,10,Kandivali West; Kandivali East; Charkop; Thakur Village; Poisar,6600000
+R/C,Borivali,Zone 7,R/C Ward Office (synthetic),19.231,72.856,24.3,535687,0.4,11,Borivali West; Borivali East; Gorai; IC Colony; Magathane,2900000
+R/N,Dahisar,Zone 7,R/N Ward Office (synthetic),19.252,72.86,32.5,369287,0.65,11,Dahisar East; Dahisar West; Anand Nagar; Rawalpada,4800000
+L,Kurla,Zone 5,L Ward Office (synthetic),19.072,72.885,11.6,906374,0.85,6,Kurla West; Kurla East; Saki Naka Junction; Vinoba Bhave Nagar; Nehru Nagar; Kamani,11900000
+M/E,"Govandi, Mankhurd, Deonar",Zone 5,M/E Ward Office (synthetic),19.058,72.928,39.6,847437,0.75,7,Govandi; Mankhurd; Deonar; Shivaji Nagar; Trombay,9100000
+M/W,Chembur,Zone 5,M/W Ward Office (synthetic),19.055,72.9,20.7,423575,0.6,11,Chembur; Tilak Nagar; Chedda Nagar; Shell Colony; RCF Colony,4400000
+N,"Ghatkopar, Vikhroli",Zone 6,N Ward Office (synthetic),19.09,72.912,25.9,647401,0.55,6,Ghatkopar West; Ghatkopar East; Vikhroli; Pant Nagar; Asalpha,6200000
+S,"Bhandup, Powai, Kanjurmarg",Zone 6,S Ward Office (synthetic),19.14,72.93,49.1,756485,0.55,4,Bhandup West; Bhandup East; Powai; Kanjurmarg; Nahur,9500000
+T,Mulund,Zone 6,T Ward Office (synthetic),19.172,72.953,62.2,344530,0.45,6,Mulund West; Mulund East; Mulund Check Naka; Nahur West,5100000

@@ -1,0 +1,6699 @@
+{
+ "type": "FeatureCollection",
+ "name": "mumbai_road_segments_synthetic",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0001",
+    "road_name": "Shahid Bhagat Singh Marg",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.82866,
+      18.920691
+     ],
+     [
+      72.828663,
+      18.922664
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0002",
+    "road_name": "Shahid Bhagat Singh Marg",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.828663,
+      18.922664
+     ],
+     [
+      72.829997,
+      18.926269
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0003",
+    "road_name": "Shahid Bhagat Singh Marg",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.829997,
+      18.926269
+     ],
+     [
+      72.832205,
+      18.929183
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0004",
+    "road_name": "Shahid Bhagat Singh Marg",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.832205,
+      18.929183
+     ],
+     [
+      72.833822,
+      18.930154
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0005",
+    "road_name": "Veer Nariman Road",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.831908,
+      18.91566
+     ],
+     [
+      72.835546,
+      18.918704
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0006",
+    "road_name": "Veer Nariman Road",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.835546,
+      18.918704
+     ],
+     [
+      72.838054,
+      18.919819
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0007",
+    "road_name": "Veer Nariman Road",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838054,
+      18.919819
+     ],
+     [
+      72.840105,
+      18.920127
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0008",
+    "road_name": "Veer Nariman Road",
+    "ward_code": "A",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.840105,
+      18.920127
+     ],
+     [
+      72.843323,
+      18.921633
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0009",
+    "road_name": "Colaba Causeway",
+    "ward_code": "A",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.831733,
+      18.922336
+     ],
+     [
+      72.834686,
+      18.920517
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0010",
+    "road_name": "Colaba Causeway",
+    "ward_code": "A",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834686,
+      18.920517
+     ],
+     [
+      72.837185,
+      18.917335
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0011",
+    "road_name": "Colaba Causeway",
+    "ward_code": "A",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.837185,
+      18.917335
+     ],
+     [
+      72.839643,
+      18.915821
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0012",
+    "road_name": "Mohammed Ali Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841807,
+      18.956534
+     ],
+     [
+      72.8426,
+      18.958952
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0013",
+    "road_name": "Mohammed Ali Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.8426,
+      18.958952
+     ],
+     [
+      72.845684,
+      18.962709
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0014",
+    "road_name": "Mohammed Ali Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.845684,
+      18.962709
+     ],
+     [
+      72.847434,
+      18.965727
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0015",
+    "road_name": "Mohammed Ali Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.847434,
+      18.965727
+     ],
+     [
+      72.847887,
+      18.968551
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0016",
+    "road_name": "P D'Mello Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.837215,
+      18.949237
+     ],
+     [
+      72.841273,
+      18.950484
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0017",
+    "road_name": "P D'Mello Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841273,
+      18.950484
+     ],
+     [
+      72.843461,
+      18.95101
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0018",
+    "road_name": "P D'Mello Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.843461,
+      18.95101
+     ],
+     [
+      72.846306,
+      18.951792
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0019",
+    "road_name": "P D'Mello Road",
+    "ward_code": "B",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.846306,
+      18.951792
+     ],
+     [
+      72.848957,
+      18.953389
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0020",
+    "road_name": "Nishanpada Road",
+    "ward_code": "B",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839463,
+      18.951527
+     ],
+     [
+      72.843877,
+      18.953573
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0021",
+    "road_name": "Nishanpada Road",
+    "ward_code": "B",
+    "road_type": "Local",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.843877,
+      18.953573
+     ],
+     [
+      72.847213,
+      18.956423
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0022",
+    "road_name": "Kalbadevi Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.823226,
+      18.949838
+     ],
+     [
+      72.824778,
+      18.952361
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0023",
+    "road_name": "Kalbadevi Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.824778,
+      18.952361
+     ],
+     [
+      72.826902,
+      18.954577
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0024",
+    "road_name": "Kalbadevi Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.826902,
+      18.954577
+     ],
+     [
+      72.830803,
+      18.956299
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0025",
+    "road_name": "Jagannath Shankarseth Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.833721,
+      18.948068
+     ],
+     [
+      72.835972,
+      18.946698
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0026",
+    "road_name": "Jagannath Shankarseth Road",
+    "ward_code": "B",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.835972,
+      18.946698
+     ],
+     [
+      72.840147,
+      18.944568
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0027",
+    "road_name": "Jagannath Shankarseth Road",
+    "ward_code": "B",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.840147,
+      18.944568
+     ],
+     [
+      72.84367,
+      18.944014
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0028",
+    "road_name": "Princess Street",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.821636,
+      18.956447
+     ],
+     [
+      72.824527,
+      18.952935
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0029",
+    "road_name": "Princess Street",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.824527,
+      18.952935
+     ],
+     [
+      72.825641,
+      18.950823
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0030",
+    "road_name": "Princess Street",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.825641,
+      18.950823
+     ],
+     [
+      72.826246,
+      18.948145
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0031",
+    "road_name": "Nepean Sea Road",
+    "ward_code": "D",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.816575,
+      18.957578
+     ],
+     [
+      72.820529,
+      18.957217
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0032",
+    "road_name": "Nepean Sea Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.820529,
+      18.957217
+     ],
+     [
+      72.822512,
+      18.957622
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0033",
+    "road_name": "Nepean Sea Road",
+    "ward_code": "C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.822512,
+      18.957622
+     ],
+     [
+      72.826207,
+      18.957887
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0034",
+    "road_name": "Pandita Ramabai Road",
+    "ward_code": "D",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.807134,
+      18.967211
+     ],
+     [
+      72.81008,
+      18.964468
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0035",
+    "road_name": "Pandita Ramabai Road",
+    "ward_code": "D",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.81008,
+      18.964468
+     ],
+     [
+      72.811898,
+      18.96261
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0036",
+    "road_name": "Pandita Ramabai Road",
+    "ward_code": "D",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.811898,
+      18.96261
+     ],
+     [
+      72.814343,
+      18.958453
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0037",
+    "road_name": "Tardeo Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.804827,
+      18.957103
+     ],
+     [
+      72.806805,
+      18.958205
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0038",
+    "road_name": "Tardeo Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.806805,
+      18.958205
+     ],
+     [
+      72.811943,
+      18.959077
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0039",
+    "road_name": "Tardeo Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.811943,
+      18.959077
+     ],
+     [
+      72.814863,
+      18.959427
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0040",
+    "road_name": "Tardeo Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.814863,
+      18.959427
+     ],
+     [
+      72.818124,
+      18.960739
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0041",
+    "road_name": "Peddar Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.807191,
+      18.963584
+     ],
+     [
+      72.80911,
+      18.96006
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0042",
+    "road_name": "Peddar Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.80911,
+      18.96006
+     ],
+     [
+      72.80961,
+      18.957987
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0043",
+    "road_name": "Peddar Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.80961,
+      18.957987
+     ],
+     [
+      72.811597,
+      18.954579
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0044",
+    "road_name": "Peddar Road",
+    "ward_code": "D",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.811597,
+      18.954579
+     ],
+     [
+      72.813337,
+      18.952573
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0045",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "E",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839977,
+      18.977772
+     ],
+     [
+      72.841586,
+      18.980879
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0046",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "E",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841586,
+      18.980879
+     ],
+     [
+      72.842665,
+      18.984128
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0047",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.842665,
+      18.984128
+     ],
+     [
+      72.843379,
+      18.986039
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0048",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "F/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.843379,
+      18.986039
+     ],
+     [
+      72.843814,
+      18.989229
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0049",
+    "road_name": "Maulana Azad Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.832028,
+      18.982492
+     ],
+     [
+      72.834383,
+      18.98377
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0050",
+    "road_name": "Maulana Azad Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834383,
+      18.98377
+     ],
+     [
+      72.838628,
+      18.984268
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0051",
+    "road_name": "Maulana Azad Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838628,
+      18.984268
+     ],
+     [
+      72.841154,
+      18.984991
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0052",
+    "road_name": "Clare Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.831579,
+      18.976035
+     ],
+     [
+      72.834875,
+      18.977241
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0053",
+    "road_name": "Clare Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834875,
+      18.977241
+     ],
+     [
+      72.839806,
+      18.978033
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0054",
+    "road_name": "Clare Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839806,
+      18.978033
+     ],
+     [
+      72.843742,
+      18.977594
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0055",
+    "road_name": "Bellasis Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.829665,
+      18.975124
+     ],
+     [
+      72.83183,
+      18.974323
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0056",
+    "road_name": "Bellasis Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.83183,
+      18.974323
+     ],
+     [
+      72.834616,
+      18.973723
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0057",
+    "road_name": "Bellasis Road",
+    "ward_code": "E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834616,
+      18.973723
+     ],
+     [
+      72.836554,
+      18.973431
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0058",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "F/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.844798,
+      19.006383
+     ],
+     [
+      72.847882,
+      19.003451
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0059",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "F/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.847882,
+      19.003451
+     ],
+     [
+      72.850664,
+      18.99951
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0060",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "F/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.850664,
+      18.99951
+     ],
+     [
+      72.85155,
+      18.996798
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0061",
+    "road_name": "Dr Babasaheb Ambedkar Road",
+    "ward_code": "F/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85155,
+      18.996798
+     ],
+     [
+      72.85305,
+      18.993982
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0062",
+    "road_name": "Dr E Moses Road",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.835329,
+      18.999104
+     ],
+     [
+      72.836151,
+      18.994466
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0063",
+    "road_name": "Dr E Moses Road",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.836151,
+      18.994466
+     ],
+     [
+      72.835598,
+      18.990264
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0064",
+    "road_name": "Dr E Moses Road",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.835598,
+      18.990264
+     ],
+     [
+      72.835776,
+      18.986006
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0065",
+    "road_name": "G D Ambekar Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834257,
+      19.000674
+     ],
+     [
+      72.836246,
+      18.997236
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0066",
+    "road_name": "G D Ambekar Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.836246,
+      18.997236
+     ],
+     [
+      72.838049,
+      18.993909
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0067",
+    "road_name": "G D Ambekar Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838049,
+      18.993909
+     ],
+     [
+      72.841919,
+      18.990813
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0068",
+    "road_name": "Acharya Donde Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.846991,
+      19.006036
+     ],
+     [
+      72.850074,
+      19.00304
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0069",
+    "road_name": "Acharya Donde Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.850074,
+      19.00304
+     ],
+     [
+      72.851377,
+      19.001219
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0070",
+    "road_name": "Acharya Donde Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.851377,
+      19.001219
+     ],
+     [
+      72.853486,
+      18.99978
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0071",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "F/N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85967,
+      19.02856
+     ],
+     [
+      72.863748,
+      19.030438
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0072",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "F/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863748,
+      19.030438
+     ],
+     [
+      72.867679,
+      19.031432
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0073",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "F/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.867679,
+      19.031432
+     ],
+     [
+      72.869454,
+      19.032553
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0074",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "F/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.869454,
+      19.032553
+     ],
+     [
+      72.871694,
+      19.033073
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0075",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "F/N",
+    "road_type": "Highway",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863242,
+      19.031595
+     ],
+     [
+      72.863393,
+      19.034817
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0076",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "F/N",
+    "road_type": "Highway",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863393,
+      19.034817
+     ],
+     [
+      72.862745,
+      19.036721
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0077",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "F/N",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.862745,
+      19.036721
+     ],
+     [
+      72.86201,
+      19.041226
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0078",
+    "road_name": "Road No 24 Sion",
+    "ward_code": "F/N",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.860534,
+      19.022363
+     ],
+     [
+      72.864355,
+      19.021733
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0079",
+    "road_name": "Road No 24 Sion",
+    "ward_code": "F/N",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.864355,
+      19.021733
+     ],
+     [
+      72.867098,
+      19.021798
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0080",
+    "road_name": "Bhaudaji Road",
+    "ward_code": "F/N",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.861634,
+      19.022177
+     ],
+     [
+      72.863752,
+      19.026689
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0081",
+    "road_name": "Bhaudaji Road",
+    "ward_code": "F/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863752,
+      19.026689
+     ],
+     [
+      72.863998,
+      19.028758
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0082",
+    "road_name": "Bhaudaji Road",
+    "ward_code": "F/N",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863998,
+      19.028758
+     ],
+     [
+      72.864596,
+      19.030704
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0083",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.813738,
+      19.009347
+     ],
+     [
+      72.814917,
+      19.005712
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0084",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.814917,
+      19.005712
+     ],
+     [
+      72.815251,
+      19.002892
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0085",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.815251,
+      19.002892
+     ],
+     [
+      72.815291,
+      18.999946
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0086",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.815291,
+      18.999946
+     ],
+     [
+      72.81558,
+      18.996751
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0087",
+    "road_name": "Dr Annie Besant Road",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.817923,
+      19.001331
+     ],
+     [
+      72.819114,
+      18.998357
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0088",
+    "road_name": "Dr Annie Besant Road",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.819114,
+      18.998357
+     ],
+     [
+      72.81991,
+      18.996572
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0089",
+    "road_name": "Dr Annie Besant Road",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.81991,
+      18.996572
+     ],
+     [
+      72.820862,
+      18.993064
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0090",
+    "road_name": "Dr Annie Besant Road",
+    "ward_code": "G/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.820862,
+      18.993064
+     ],
+     [
+      72.822673,
+      18.990756
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0091",
+    "road_name": "Ganpatrao Kadam Marg",
+    "ward_code": "G/S",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.826623,
+      19.007171
+     ],
+     [
+      72.829462,
+      19.007393
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0092",
+    "road_name": "Ganpatrao Kadam Marg",
+    "ward_code": "G/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.829462,
+      19.007393
+     ],
+     [
+      72.833978,
+      19.008712
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0093",
+    "road_name": "Ganpatrao Kadam Marg",
+    "ward_code": "F/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.833978,
+      19.008712
+     ],
+     [
+      72.836042,
+      19.008821
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0094",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838108,
+      19.044206
+     ],
+     [
+      72.838804,
+      19.040397
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0095",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838804,
+      19.040397
+     ],
+     [
+      72.841135,
+      19.036489
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0096",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841135,
+      19.036489
+     ],
+     [
+      72.842615,
+      19.033714
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0097",
+    "road_name": "Senapati Bapat Marg",
+    "ward_code": "G/N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.842615,
+      19.033714
+     ],
+     [
+      72.844435,
+      19.030395
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0098",
+    "road_name": "Lady Jamshedji Road",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.838431,
+      19.03789
+     ],
+     [
+      72.839644,
+      19.036351
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0099",
+    "road_name": "Lady Jamshedji Road",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839644,
+      19.036351
+     ],
+     [
+      72.842917,
+      19.03386
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0100",
+    "road_name": "Lady Jamshedji Road",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.842917,
+      19.03386
+     ],
+     [
+      72.845116,
+      19.03073
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0101",
+    "road_name": "90 Feet Road Dharavi",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.84788,
+      19.041364
+     ],
+     [
+      72.85028,
+      19.040325
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0102",
+    "road_name": "90 Feet Road Dharavi",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85028,
+      19.040325
+     ],
+     [
+      72.85234,
+      19.038975
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0103",
+    "road_name": "90 Feet Road Dharavi",
+    "ward_code": "F/N",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85234,
+      19.038975
+     ],
+     [
+      72.854924,
+      19.036525
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0104",
+    "road_name": "Gokhale Road",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.847545,
+      19.039583
+     ],
+     [
+      72.84966,
+      19.038398
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0105",
+    "road_name": "Gokhale Road",
+    "ward_code": "G/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.84966,
+      19.038398
+     ],
+     [
+      72.853207,
+      19.035768
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0106",
+    "road_name": "Gokhale Road",
+    "ward_code": "F/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.853207,
+      19.035768
+     ],
+     [
+      72.856778,
+      19.032227
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0107",
+    "road_name": "Western Express Highway",
+    "ward_code": "H/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.859706,
+      19.074709
+     ],
+     [
+      72.859959,
+      19.077039
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0108",
+    "road_name": "Western Express Highway",
+    "ward_code": "H/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.859959,
+      19.077039
+     ],
+     [
+      72.861617,
+      19.079981
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0109",
+    "road_name": "Western Express Highway",
+    "ward_code": "H/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.861617,
+      19.079981
+     ],
+     [
+      72.861895,
+      19.082182
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0110",
+    "road_name": "Kalanagar Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.858478,
+      19.07039
+     ],
+     [
+      72.86233,
+      19.069066
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0111",
+    "road_name": "Kalanagar Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.86233,
+      19.069066
+     ],
+     [
+      72.867353,
+      19.069005
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0112",
+    "road_name": "Kalanagar Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.867353,
+      19.069005
+     ],
+     [
+      72.869659,
+      19.068603
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0113",
+    "road_name": "Vakola Bridge Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.864754,
+      19.070718
+     ],
+     [
+      72.865902,
+      19.067661
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0114",
+    "road_name": "Vakola Bridge Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.865902,
+      19.067661
+     ],
+     [
+      72.866698,
+      19.064442
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0115",
+    "road_name": "Vakola Bridge Road",
+    "ward_code": "H/E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.866698,
+      19.064442
+     ],
+     [
+      72.866417,
+      19.06064
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0116",
+    "road_name": "SV Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.825482,
+      19.063115
+     ],
+     [
+      72.828219,
+      19.064324
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0117",
+    "road_name": "SV Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.828219,
+      19.064324
+     ],
+     [
+      72.831309,
+      19.067252
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0118",
+    "road_name": "SV Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.831309,
+      19.067252
+     ],
+     [
+      72.832925,
+      19.06882
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0119",
+    "road_name": "SV Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.832925,
+      19.06882
+     ],
+     [
+      72.835111,
+      19.072277
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0120",
+    "road_name": "Linking Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.832073,
+      19.062822
+     ],
+     [
+      72.833447,
+      19.060628
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0121",
+    "road_name": "Linking Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.833447,
+      19.060628
+     ],
+     [
+      72.83546,
+      19.058091
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0122",
+    "road_name": "Linking Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.83546,
+      19.058091
+     ],
+     [
+      72.83866,
+      19.055365
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0123",
+    "road_name": "Linking Road",
+    "ward_code": "H/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.83866,
+      19.055365
+     ],
+     [
+      72.84019,
+      19.053331
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0124",
+    "road_name": "Hill Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.834618,
+      19.066641
+     ],
+     [
+      72.83687,
+      19.064351
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0125",
+    "road_name": "Hill Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.83687,
+      19.064351
+     ],
+     [
+      72.841022,
+      19.06146
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0126",
+    "road_name": "Hill Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841022,
+      19.06146
+     ],
+     [
+      72.844215,
+      19.059119
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0127",
+    "road_name": "Milan Subway Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.8239,
+      19.061049
+     ],
+     [
+      72.8258,
+      19.065268
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0128",
+    "road_name": "Milan Subway Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.8258,
+      19.065268
+     ],
+     [
+      72.82718,
+      19.067646
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0129",
+    "road_name": "Milan Subway Road",
+    "ward_code": "H/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.82718,
+      19.067646
+     ],
+     [
+      72.830473,
+      19.071267
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0130",
+    "road_name": "Andheri Kurla Road",
+    "ward_code": "K/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863117,
+      19.117253
+     ],
+     [
+      72.866123,
+      19.116315
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0131",
+    "road_name": "Andheri Kurla Road",
+    "ward_code": "K/E",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.866123,
+      19.116315
+     ],
+     [
+      72.869772,
+      19.115637
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0132",
+    "road_name": "Andheri Kurla Road",
+    "ward_code": "K/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.869772,
+      19.115637
+     ],
+     [
+      72.874576,
+      19.115543
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0133",
+    "road_name": "Andheri Kurla Road",
+    "ward_code": "K/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.874576,
+      19.115543
+     ],
+     [
+      72.878568,
+      19.114008
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0134",
+    "road_name": "Western Express Highway",
+    "ward_code": "K/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.870354,
+      19.117055
+     ],
+     [
+      72.870592,
+      19.11505
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0135",
+    "road_name": "Western Express Highway",
+    "ward_code": "K/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.870592,
+      19.11505
+     ],
+     [
+      72.872349,
+      19.112015
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0136",
+    "road_name": "Western Express Highway",
+    "ward_code": "K/E",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.872349,
+      19.112015
+     ],
+     [
+      72.874132,
+      19.10889
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0137",
+    "road_name": "Mahakali Caves Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.86048,
+      19.118276
+     ],
+     [
+      72.863126,
+      19.119835
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0138",
+    "road_name": "Mahakali Caves Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863126,
+      19.119835
+     ],
+     [
+      72.867217,
+      19.120864
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0139",
+    "road_name": "Mahakali Caves Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.867217,
+      19.120864
+     ],
+     [
+      72.870075,
+      19.120616
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0140",
+    "road_name": "Marol Maroshi Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.865949,
+      19.117039
+     ],
+     [
+      72.869564,
+      19.1167
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0141",
+    "road_name": "Marol Maroshi Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.869564,
+      19.1167
+     ],
+     [
+      72.872696,
+      19.117193
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0142",
+    "road_name": "Marol Maroshi Road",
+    "ward_code": "K/E",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.872696,
+      19.117193
+     ],
+     [
+      72.874995,
+      19.118046
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0143",
+    "road_name": "SV Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839224,
+      19.13079
+     ],
+     [
+      72.842276,
+      19.127689
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0144",
+    "road_name": "SV Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.842276,
+      19.127689
+     ],
+     [
+      72.845647,
+      19.124254
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0145",
+    "road_name": "SV Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.845647,
+      19.124254
+     ],
+     [
+      72.849375,
+      19.121431
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0146",
+    "road_name": "SV Road",
+    "ward_code": "K/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.849375,
+      19.121431
+     ],
+     [
+      72.853173,
+      19.118829
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0147",
+    "road_name": "Juhu Tara Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.840504,
+      19.119705
+     ],
+     [
+      72.841965,
+      19.118385
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0148",
+    "road_name": "Juhu Tara Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841965,
+      19.118385
+     ],
+     [
+      72.846199,
+      19.11652
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0149",
+    "road_name": "Juhu Tara Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.846199,
+      19.11652
+     ],
+     [
+      72.847905,
+      19.115366
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0150",
+    "road_name": "JP Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.837113,
+      19.129519
+     ],
+     [
+      72.840306,
+      19.129441
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0151",
+    "road_name": "JP Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.840306,
+      19.129441
+     ],
+     [
+      72.84455,
+      19.130294
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0152",
+    "road_name": "JP Road",
+    "ward_code": "K/W",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.84455,
+      19.130294
+     ],
+     [
+      72.848949,
+      19.131055
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0153",
+    "road_name": "Andheri Subway",
+    "ward_code": "K/W",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.832562,
+      19.118274
+     ],
+     [
+      72.836081,
+      19.116217
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0154",
+    "road_name": "Andheri Subway",
+    "ward_code": "K/W",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.836081,
+      19.116217
+     ],
+     [
+      72.840014,
+      19.114666
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0155",
+    "road_name": "Link Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.842093,
+      19.124594
+     ],
+     [
+      72.843991,
+      19.128883
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0156",
+    "road_name": "Link Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.843991,
+      19.128883
+     ],
+     [
+      72.845296,
+      19.131844
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0157",
+    "road_name": "Link Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.845296,
+      19.131844
+     ],
+     [
+      72.846767,
+      19.136459
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0158",
+    "road_name": "Link Road",
+    "ward_code": "K/W",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.846767,
+      19.136459
+     ],
+     [
+      72.849778,
+      19.140181
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0159",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.852889,
+      19.161816
+     ],
+     [
+      72.854859,
+      19.165879
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0160",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.854859,
+      19.165879
+     ],
+     [
+      72.854971,
+      19.169454
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0161",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.854971,
+      19.169454
+     ],
+     [
+      72.855823,
+      19.173326
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0162",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.855823,
+      19.173326
+     ],
+     [
+      72.856214,
+      19.177535
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0163",
+    "road_name": "Aarey Road",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.853785,
+      19.164863
+     ],
+     [
+      72.854678,
+      19.167402
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0164",
+    "road_name": "Aarey Road",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.854678,
+      19.167402
+     ],
+     [
+      72.855946,
+      19.171369
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0165",
+    "road_name": "Aarey Road",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.855946,
+      19.171369
+     ],
+     [
+      72.857236,
+      19.173145
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0166",
+    "road_name": "MG Road Goregaon",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841787,
+      19.162178
+     ],
+     [
+      72.843048,
+      19.159327
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0167",
+    "road_name": "MG Road Goregaon",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.843048,
+      19.159327
+     ],
+     [
+      72.844502,
+      19.15482
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0168",
+    "road_name": "MG Road Goregaon",
+    "ward_code": "P/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.844502,
+      19.15482
+     ],
+     [
+      72.844735,
+      19.151846
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0169",
+    "road_name": "Link Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.852216,
+      19.166861
+     ],
+     [
+      72.853144,
+      19.164914
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0170",
+    "road_name": "Link Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.853144,
+      19.164914
+     ],
+     [
+      72.855956,
+      19.161077
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0171",
+    "road_name": "Link Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.855956,
+      19.161077
+     ],
+     [
+      72.857336,
+      19.159719
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0172",
+    "road_name": "Link Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.857336,
+      19.159719
+     ],
+     [
+      72.859207,
+      19.155742
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0173",
+    "road_name": "Marve Road",
+    "ward_code": "P/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.839295,
+      19.184307
+     ],
+     [
+      72.841202,
+      19.184915
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0174",
+    "road_name": "Marve Road",
+    "ward_code": "P/N",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.841202,
+      19.184915
+     ],
+     [
+      72.844809,
+      19.185462
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0175",
+    "road_name": "Marve Road",
+    "ward_code": "P/N",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.844809,
+      19.185462
+     ],
+     [
+      72.847597,
+      19.18701
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0176",
+    "road_name": "SV Road",
+    "ward_code": "P/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.845555,
+      19.181798
+     ],
+     [
+      72.847378,
+      19.178197
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0177",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.847378,
+      19.178197
+     ],
+     [
+      72.848924,
+      19.175101
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0178",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.848924,
+      19.175101
+     ],
+     [
+      72.849767,
+      19.172509
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0179",
+    "road_name": "SV Road",
+    "ward_code": "P/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.849767,
+      19.172509
+     ],
+     [
+      72.852231,
+      19.169311
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0180",
+    "road_name": "Malad Subway",
+    "ward_code": "P/N",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85007,
+      19.184972
+     ],
+     [
+      72.85231,
+      19.184125
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0181",
+    "road_name": "Malad Subway",
+    "ward_code": "P/N",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85231,
+      19.184125
+     ],
+     [
+      72.856665,
+      19.182521
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0182",
+    "road_name": "Link Road",
+    "ward_code": "P/N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.846304,
+      19.195668
+     ],
+     [
+      72.850239,
+      19.198165
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0183",
+    "road_name": "Link Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.850239,
+      19.198165
+     ],
+     [
+      72.851844,
+      19.200392
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0184",
+    "road_name": "Link Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.851844,
+      19.200392
+     ],
+     [
+      72.85531,
+      19.203218
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0185",
+    "road_name": "Link Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85531,
+      19.203218
+     ],
+     [
+      72.858839,
+      19.204703
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0186",
+    "road_name": "SV Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85364,
+      19.203335
+     ],
+     [
+      72.857454,
+      19.203227
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0187",
+    "road_name": "SV Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.857454,
+      19.203227
+     ],
+     [
+      72.860868,
+      19.203874
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0188",
+    "road_name": "SV Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.860868,
+      19.203874
+     ],
+     [
+      72.863528,
+      19.205397
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0189",
+    "road_name": "SV Road",
+    "ward_code": "R/S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.863528,
+      19.205397
+     ],
+     [
+      72.868426,
+      19.20608
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0190",
+    "road_name": "Charkop Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.851935,
+      19.20453
+     ],
+     [
+      72.856286,
+      19.202116
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0191",
+    "road_name": "Charkop Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.856286,
+      19.202116
+     ],
+     [
+      72.859539,
+      19.198496
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0192",
+    "road_name": "Charkop Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.859539,
+      19.198496
+     ],
+     [
+      72.861339,
+      19.195237
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0193",
+    "road_name": "Thakur Village Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.856509,
+      19.210122
+     ],
+     [
+      72.858369,
+      19.20911
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0194",
+    "road_name": "Thakur Village Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.858369,
+      19.20911
+     ],
+     [
+      72.861472,
+      19.206576
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0195",
+    "road_name": "Thakur Village Road",
+    "ward_code": "R/S",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.861472,
+      19.206576
+     ],
+     [
+      72.863377,
+      19.205604
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0196",
+    "road_name": "SV Road",
+    "ward_code": "R/C",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.858877,
+      19.227728
+     ],
+     [
+      72.861551,
+      19.228691
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0197",
+    "road_name": "SV Road",
+    "ward_code": "R/C",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.861551,
+      19.228691
+     ],
+     [
+      72.866555,
+      19.229689
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0198",
+    "road_name": "SV Road",
+    "ward_code": "R/C",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.866555,
+      19.229689
+     ],
+     [
+      72.870312,
+      19.229557
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0199",
+    "road_name": "SV Road",
+    "ward_code": "R/C",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.870312,
+      19.229557
+     ],
+     [
+      72.872822,
+      19.229202
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0200",
+    "road_name": "LT Road",
+    "ward_code": "R/C",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.857142,
+      19.234974
+     ],
+     [
+      72.858916,
+      19.23797
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0201",
+    "road_name": "LT Road",
+    "ward_code": "R/C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.858916,
+      19.23797
+     ],
+     [
+      72.860488,
+      19.241597
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0202",
+    "road_name": "LT Road",
+    "ward_code": "R/N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.860488,
+      19.241597
+     ],
+     [
+      72.863597,
+      19.245488
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0203",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/C",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.855517,
+      19.231508
+     ],
+     [
+      72.857683,
+      19.231841
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0204",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/C",
+    "road_type": "Highway",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.857683,
+      19.231841
+     ],
+     [
+      72.861984,
+      19.233789
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0205",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/C",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.861984,
+      19.233789
+     ],
+     [
+      72.864926,
+      19.235911
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0206",
+    "road_name": "Gorai Road",
+    "ward_code": "R/C",
+    "road_type": "Main",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.856978,
+      19.224603
+     ],
+     [
+      72.859967,
+      19.223485
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0207",
+    "road_name": "Gorai Road",
+    "ward_code": "R/C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.859967,
+      19.223485
+     ],
+     [
+      72.864289,
+      19.221897
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0208",
+    "road_name": "Gorai Road",
+    "ward_code": "R/C",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.864289,
+      19.221897
+     ],
+     [
+      72.868233,
+      19.219071
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0209",
+    "road_name": "Dahisar Subway Road",
+    "ward_code": "R/N",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.866573,
+      19.249704
+     ],
+     [
+      72.86783,
+      19.245181
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0210",
+    "road_name": "Dahisar Subway Road",
+    "ward_code": "R/N",
+    "road_type": "Local",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.86783,
+      19.245181
+     ],
+     [
+      72.867857,
+      19.242857
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0211",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/N",
+    "road_type": "Highway",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.855069,
+      19.246067
+     ],
+     [
+      72.857666,
+      19.248149
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0212",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/N",
+    "road_type": "Highway",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.857666,
+      19.248149
+     ],
+     [
+      72.85989,
+      19.249428
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0213",
+    "road_name": "Western Express Highway",
+    "ward_code": "R/N",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.85989,
+      19.249428
+     ],
+     [
+      72.862197,
+      19.251234
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0214",
+    "road_name": "Anand Nagar Road",
+    "ward_code": "R/N",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.867678,
+      19.252087
+     ],
+     [
+      72.870311,
+      19.247968
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0215",
+    "road_name": "Anand Nagar Road",
+    "ward_code": "R/N",
+    "road_type": "Local",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.870311,
+      19.247968
+     ],
+     [
+      72.872401,
+      19.244761
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0216",
+    "road_name": "LBS Marg",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.884098,
+      19.068934
+     ],
+     [
+      72.886235,
+      19.069931
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0217",
+    "road_name": "LBS Marg",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.886235,
+      19.069931
+     ],
+     [
+      72.889296,
+      19.071067
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0218",
+    "road_name": "LBS Marg",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.889296,
+      19.071067
+     ],
+     [
+      72.893147,
+      19.073467
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0219",
+    "road_name": "LBS Marg",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.893147,
+      19.073467
+     ],
+     [
+      72.895286,
+      19.075395
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0220",
+    "road_name": "Kurla Andheri Road",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.884975,
+      19.079253
+     ],
+     [
+      72.886989,
+      19.083395
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0221",
+    "road_name": "Kurla Andheri Road",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.886989,
+      19.083395
+     ],
+     [
+      72.888578,
+      19.08807
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0222",
+    "road_name": "Kurla Andheri Road",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.888578,
+      19.08807
+     ],
+     [
+      72.889264,
+      19.091541
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0223",
+    "road_name": "Kurla Andheri Road",
+    "ward_code": "L",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.889264,
+      19.091541
+     ],
+     [
+      72.889108,
+      19.096062
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0224",
+    "road_name": "CST Road",
+    "ward_code": "L",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.885449,
+      19.066809
+     ],
+     [
+      72.888188,
+      19.064328
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0225",
+    "road_name": "CST Road",
+    "ward_code": "L",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.888188,
+      19.064328
+     ],
+     [
+      72.889575,
+      19.061923
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0226",
+    "road_name": "CST Road",
+    "ward_code": "M/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.889575,
+      19.061923
+     ],
+     [
+      72.891741,
+      19.058269
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0227",
+    "road_name": "Kamani Junction Road",
+    "ward_code": "L",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.891747,
+      19.070418
+     ],
+     [
+      72.894728,
+      19.072487
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0228",
+    "road_name": "Kamani Junction Road",
+    "ward_code": "L",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.894728,
+      19.072487
+     ],
+     [
+      72.896801,
+      19.075026
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0229",
+    "road_name": "Ghatkopar Mankhurd Link Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.924029,
+      19.05114
+     ],
+     [
+      72.924812,
+      19.054464
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0230",
+    "road_name": "Ghatkopar Mankhurd Link Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.924812,
+      19.054464
+     ],
+     [
+      72.924931,
+      19.05775
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0231",
+    "road_name": "Ghatkopar Mankhurd Link Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.924931,
+      19.05775
+     ],
+     [
+      72.925951,
+      19.059875
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0232",
+    "road_name": "Ghatkopar Mankhurd Link Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.925951,
+      19.059875
+     ],
+     [
+      72.926544,
+      19.06202
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0233",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.924331,
+      19.055764
+     ],
+     [
+      72.928204,
+      19.057112
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0234",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.928204,
+      19.057112
+     ],
+     [
+      72.932779,
+      19.058165
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0235",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.932779,
+      19.058165
+     ],
+     [
+      72.93763,
+      19.059995
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0236",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/E",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.93763,
+      19.059995
+     ],
+     [
+      72.940679,
+      19.061483
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0237",
+    "road_name": "Deonar Village Road",
+    "ward_code": "M/E",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.928776,
+      19.060025
+     ],
+     [
+      72.932344,
+      19.059437
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0238",
+    "road_name": "Deonar Village Road",
+    "ward_code": "M/E",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.932344,
+      19.059437
+     ],
+     [
+      72.937207,
+      19.057842
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0239",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.906461,
+      19.055817
+     ],
+     [
+      72.906817,
+      19.053763
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0240",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/W",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.906817,
+      19.053763
+     ],
+     [
+      72.908645,
+      19.050046
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0241",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.908645,
+      19.050046
+     ],
+     [
+      72.911184,
+      19.047504
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0242",
+    "road_name": "Sion Trombay Road",
+    "ward_code": "M/W",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.911184,
+      19.047504
+     ],
+     [
+      72.912033,
+      19.045881
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0243",
+    "road_name": "RC Marg",
+    "ward_code": "M/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.897029,
+      19.051308
+     ],
+     [
+      72.897696,
+      19.049486
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0244",
+    "road_name": "RC Marg",
+    "ward_code": "M/W",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.897696,
+      19.049486
+     ],
+     [
+      72.898898,
+      19.047184
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0245",
+    "road_name": "RC Marg",
+    "ward_code": "M/W",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.898898,
+      19.047184
+     ],
+     [
+      72.900854,
+      19.044685
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0246",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "M/W",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.905033,
+      19.060379
+     ],
+     [
+      72.907951,
+      19.056339
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0247",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "M/W",
+    "road_type": "Highway",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.907951,
+      19.056339
+     ],
+     [
+      72.911487,
+      19.053031
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0248",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "M/W",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.911487,
+      19.053031
+     ],
+     [
+      72.914343,
+      19.05125
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0249",
+    "road_name": "Shell Colony Road",
+    "ward_code": "M/W",
+    "road_type": "Local",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.901624,
+      19.056012
+     ],
+     [
+      72.903418,
+      19.059525
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0250",
+    "road_name": "Shell Colony Road",
+    "ward_code": "M/W",
+    "road_type": "Local",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.903418,
+      19.059525
+     ],
+     [
+      72.904725,
+      19.062229
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0251",
+    "road_name": "LBS Marg",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.903964,
+      19.087726
+     ],
+     [
+      72.90419,
+      19.090755
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0252",
+    "road_name": "LBS Marg",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.90419,
+      19.090755
+     ],
+     [
+      72.903955,
+      19.094261
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0253",
+    "road_name": "LBS Marg",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.903955,
+      19.094261
+     ],
+     [
+      72.903449,
+      19.097232
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0254",
+    "road_name": "LBS Marg",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.903449,
+      19.097232
+     ],
+     [
+      72.902253,
+      19.100175
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0255",
+    "road_name": "MG Road Ghatkopar",
+    "ward_code": "N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.913299,
+      19.092759
+     ],
+     [
+      72.915424,
+      19.095119
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0256",
+    "road_name": "MG Road Ghatkopar",
+    "ward_code": "N",
+    "road_type": "Main",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.915424,
+      19.095119
+     ],
+     [
+      72.919378,
+      19.09742
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0257",
+    "road_name": "MG Road Ghatkopar",
+    "ward_code": "N",
+    "road_type": "Main",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.919378,
+      19.09742
+     ],
+     [
+      72.921117,
+      19.098783
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0258",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "N",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.914322,
+      19.095893
+     ],
+     [
+      72.915342,
+      19.100099
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0259",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "N",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.915342,
+      19.100099
+     ],
+     [
+      72.916132,
+      19.101906
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0260",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "N",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.916132,
+      19.101906
+     ],
+     [
+      72.916336,
+      19.105829
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0261",
+    "road_name": "Andheri Ghatkopar Link Road",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.910787,
+      19.088253
+     ],
+     [
+      72.912059,
+      19.093051
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0262",
+    "road_name": "Andheri Ghatkopar Link Road",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.912059,
+      19.093051
+     ],
+     [
+      72.912273,
+      19.094886
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0263",
+    "road_name": "Andheri Ghatkopar Link Road",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.912273,
+      19.094886
+     ],
+     [
+      72.912775,
+      19.097419
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0264",
+    "road_name": "Andheri Ghatkopar Link Road",
+    "ward_code": "N",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.912775,
+      19.097419
+     ],
+     [
+      72.913011,
+      19.099352
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0265",
+    "road_name": "LBS Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.933462,
+      19.133018
+     ],
+     [
+      72.93372,
+      19.135357
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0266",
+    "road_name": "LBS Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.93372,
+      19.135357
+     ],
+     [
+      72.934807,
+      19.137502
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0267",
+    "road_name": "LBS Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.934807,
+      19.137502
+     ],
+     [
+      72.93662,
+      19.140435
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0268",
+    "road_name": "LBS Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.93662,
+      19.140435
+     ],
+     [
+      72.937918,
+      19.144024
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0269",
+    "road_name": "JVLR",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.922291,
+      19.142265
+     ],
+     [
+      72.925272,
+      19.139262
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0270",
+    "road_name": "JVLR",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.925272,
+      19.139262
+     ],
+     [
+      72.927386,
+      19.136718
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0271",
+    "road_name": "JVLR",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.927386,
+      19.136718
+     ],
+     [
+      72.928547,
+      19.133304
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0272",
+    "road_name": "JVLR",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.928547,
+      19.133304
+     ],
+     [
+      72.930808,
+      19.130816
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0273",
+    "road_name": "Powai Adi Shankaracharya Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.936584,
+      19.14218
+     ],
+     [
+      72.937918,
+      19.144229
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0274",
+    "road_name": "Powai Adi Shankaracharya Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.937918,
+      19.144229
+     ],
+     [
+      72.941306,
+      19.146732
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0275",
+    "road_name": "Powai Adi Shankaracharya Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.941306,
+      19.146732
+     ],
+     [
+      72.943577,
+      19.149716
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0276",
+    "road_name": "Powai Adi Shankaracharya Marg",
+    "ward_code": "S",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.943577,
+      19.149716
+     ],
+     [
+      72.947161,
+      19.152809
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0277",
+    "road_name": "Village Road Bhandup",
+    "ward_code": "S",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.928118,
+      19.14673
+     ],
+     [
+      72.93242,
+      19.149517
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0278",
+    "road_name": "Village Road Bhandup",
+    "ward_code": "S",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.93242,
+      19.149517
+     ],
+     [
+      72.934482,
+      19.151176
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0279",
+    "road_name": "LBS Marg",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.947055,
+      19.1747
+     ],
+     [
+      72.947819,
+      19.17271
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0280",
+    "road_name": "LBS Marg",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.947819,
+      19.17271
+     ],
+     [
+      72.948119,
+      19.170013
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0281",
+    "road_name": "LBS Marg",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.948119,
+      19.170013
+     ],
+     [
+      72.948558,
+      19.167662
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0282",
+    "road_name": "LBS Marg",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.948558,
+      19.167662
+     ],
+     [
+      72.948346,
+      19.165744
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0283",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "T",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.959291,
+      19.17108
+     ],
+     [
+      72.960584,
+      19.168027
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0284",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "T",
+    "road_type": "Highway",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.960584,
+      19.168027
+     ],
+     [
+      72.961423,
+      19.163181
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0285",
+    "road_name": "Eastern Express Highway",
+    "ward_code": "T",
+    "road_type": "Highway",
+    "surface": "Paver blocks"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.961423,
+      19.163181
+     ],
+     [
+      72.960739,
+      19.16027
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0286",
+    "road_name": "Mulund Goregaon Link Road",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.957213,
+      19.166683
+     ],
+     [
+      72.959628,
+      19.168279
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0287",
+    "road_name": "Mulund Goregaon Link Road",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.959628,
+      19.168279
+     ],
+     [
+      72.963805,
+      19.16921
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0288",
+    "road_name": "Mulund Goregaon Link Road",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.963805,
+      19.16921
+     ],
+     [
+      72.968343,
+      19.170303
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0289",
+    "road_name": "Mulund Goregaon Link Road",
+    "ward_code": "T",
+    "road_type": "Arterial",
+    "surface": "Asphalt"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.968343,
+      19.170303
+     ],
+     [
+      72.972368,
+      19.17056
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0290",
+    "road_name": "Devidayal Road",
+    "ward_code": "T",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.947075,
+      19.166877
+     ],
+     [
+      72.948945,
+      19.171294
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "road_id": "RD0291",
+    "road_name": "Devidayal Road",
+    "ward_code": "T",
+    "road_type": "Local",
+    "surface": "Concrete (CC)"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      72.948945,
+      19.171294
+     ],
+     [
+      72.949462,
+      19.175962
+     ]
+    ]
+   }
+  }
+ ]
+}

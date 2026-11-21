@@ -1,0 +1,245 @@
+date,station,rainfall_mm,imd_category,imd_alert
+2025-06-01,Santacruz,2.1,Light,Green
+2025-06-01,Colaba,1.2,Light,Green
+2025-06-02,Santacruz,0,No rain,Green
+2025-06-02,Colaba,0,No rain,Green
+2025-06-03,Santacruz,8.4,Light,Green
+2025-06-03,Colaba,7.3,Light,Green
+2025-06-04,Santacruz,0,No rain,Green
+2025-06-04,Colaba,0,No rain,Green
+2025-06-05,Santacruz,0,No rain,Green
+2025-06-05,Colaba,0,No rain,Green
+2025-06-06,Santacruz,0,No rain,Green
+2025-06-06,Colaba,0,No rain,Green
+2025-06-07,Santacruz,7.2,Light,Green
+2025-06-07,Colaba,6.6,Light,Green
+2025-06-08,Santacruz,1.1,Light,Green
+2025-06-08,Colaba,0.9,Light,Green
+2025-06-09,Santacruz,18.0,Moderate,Green
+2025-06-09,Colaba,14.5,Light,Green
+2025-06-10,Santacruz,7.9,Light,Green
+2025-06-10,Colaba,6.1,Light,Green
+2025-06-11,Santacruz,26.9,Moderate,Green
+2025-06-11,Colaba,18.5,Moderate,Green
+2025-06-12,Santacruz,0.1,Light,Green
+2025-06-12,Colaba,0.1,Light,Green
+2025-06-13,Santacruz,1.2,Light,Green
+2025-06-13,Colaba,0.8,Light,Green
+2025-06-14,Santacruz,4.6,Light,Green
+2025-06-14,Colaba,3.3,Light,Green
+2025-06-15,Santacruz,7.2,Light,Green
+2025-06-15,Colaba,4.8,Light,Green
+2025-06-16,Santacruz,145.3,Very heavy,Orange
+2025-06-16,Colaba,126.8,Very heavy,Orange
+2025-06-17,Santacruz,173.2,Very heavy,Orange
+2025-06-17,Colaba,210.5,Extremely heavy,Red
+2025-06-18,Santacruz,249.5,Extremely heavy,Red
+2025-06-18,Colaba,193.6,Very heavy,Orange
+2025-06-19,Santacruz,10.3,Light,Green
+2025-06-19,Colaba,12.2,Light,Green
+2025-06-20,Santacruz,3.7,Light,Green
+2025-06-20,Colaba,3.2,Light,Green
+2025-06-21,Santacruz,31.3,Moderate,Green
+2025-06-21,Colaba,21.7,Moderate,Green
+2025-06-22,Santacruz,5.7,Light,Green
+2025-06-22,Colaba,3.8,Light,Green
+2025-06-23,Santacruz,19.6,Moderate,Green
+2025-06-23,Colaba,14.0,Light,Green
+2025-06-24,Santacruz,2.8,Light,Green
+2025-06-24,Colaba,1.7,Light,Green
+2025-06-25,Santacruz,12.8,Light,Green
+2025-06-25,Colaba,9.1,Light,Green
+2025-06-26,Santacruz,9.7,Light,Green
+2025-06-26,Colaba,9.5,Light,Green
+2025-06-27,Santacruz,27.1,Moderate,Green
+2025-06-27,Colaba,32.0,Moderate,Green
+2025-06-28,Santacruz,105.3,Heavy,Yellow
+2025-06-28,Colaba,69.2,Heavy,Yellow
+2025-06-29,Santacruz,68.1,Heavy,Yellow
+2025-06-29,Colaba,71.8,Heavy,Yellow
+2025-06-30,Santacruz,2.3,Light,Green
+2025-06-30,Colaba,2.2,Light,Green
+2025-07-01,Santacruz,20.2,Moderate,Green
+2025-07-01,Colaba,11.9,Light,Green
+2025-07-02,Santacruz,6.3,Light,Green
+2025-07-02,Colaba,5.4,Light,Green
+2025-07-03,Santacruz,8.9,Light,Green
+2025-07-03,Colaba,7.1,Light,Green
+2025-07-04,Santacruz,30.1,Moderate,Green
+2025-07-04,Colaba,31.2,Moderate,Green
+2025-07-05,Santacruz,37.6,Moderate,Green
+2025-07-05,Colaba,29.7,Moderate,Green
+2025-07-06,Santacruz,0.4,Light,Green
+2025-07-06,Colaba,0.2,Light,Green
+2025-07-07,Santacruz,152.8,Very heavy,Orange
+2025-07-07,Colaba,126.5,Very heavy,Orange
+2025-07-08,Santacruz,170.1,Very heavy,Orange
+2025-07-08,Colaba,128.2,Very heavy,Orange
+2025-07-09,Santacruz,150.5,Very heavy,Orange
+2025-07-09,Colaba,91.4,Heavy,Yellow
+2025-07-10,Santacruz,150.4,Very heavy,Orange
+2025-07-10,Colaba,104.5,Heavy,Yellow
+2025-07-11,Santacruz,1.2,Light,Green
+2025-07-11,Colaba,1.1,Light,Green
+2025-07-12,Santacruz,20.6,Moderate,Green
+2025-07-12,Colaba,12.7,Light,Green
+2025-07-13,Santacruz,70.7,Heavy,Yellow
+2025-07-13,Colaba,57.8,Moderate,Green
+2025-07-14,Santacruz,1.2,Light,Green
+2025-07-14,Colaba,0.8,Light,Green
+2025-07-15,Santacruz,1.4,Light,Green
+2025-07-15,Colaba,1.6,Light,Green
+2025-07-16,Santacruz,1.9,Light,Green
+2025-07-16,Colaba,1.8,Light,Green
+2025-07-17,Santacruz,20.6,Moderate,Green
+2025-07-17,Colaba,13.9,Light,Green
+2025-07-18,Santacruz,1.2,Light,Green
+2025-07-18,Colaba,0.7,Light,Green
+2025-07-19,Santacruz,24.6,Moderate,Green
+2025-07-19,Colaba,14.2,Light,Green
+2025-07-20,Santacruz,6.6,Light,Green
+2025-07-20,Colaba,5.9,Light,Green
+2025-07-21,Santacruz,44.9,Moderate,Green
+2025-07-21,Colaba,35.2,Moderate,Green
+2025-07-22,Santacruz,7.8,Light,Green
+2025-07-22,Colaba,6.5,Light,Green
+2025-07-23,Santacruz,0.2,Light,Green
+2025-07-23,Colaba,0.2,Light,Green
+2025-07-24,Santacruz,225.8,Extremely heavy,Red
+2025-07-24,Colaba,159.0,Very heavy,Orange
+2025-07-25,Santacruz,245.1,Extremely heavy,Red
+2025-07-25,Colaba,222.3,Extremely heavy,Red
+2025-07-26,Santacruz,210.8,Extremely heavy,Red
+2025-07-26,Colaba,179.2,Very heavy,Orange
+2025-07-27,Santacruz,14.4,Light,Green
+2025-07-27,Colaba,7.5,Light,Green
+2025-07-28,Santacruz,19.7,Moderate,Green
+2025-07-28,Colaba,13.5,Light,Green
+2025-07-29,Santacruz,0.4,Light,Green
+2025-07-29,Colaba,0.4,Light,Green
+2025-07-30,Santacruz,4.3,Light,Green
+2025-07-30,Colaba,3.1,Light,Green
+2025-07-31,Santacruz,7.4,Light,Green
+2025-07-31,Colaba,5.7,Light,Green
+2025-08-01,Santacruz,45.1,Moderate,Green
+2025-08-01,Colaba,34.9,Moderate,Green
+2025-08-02,Santacruz,13.3,Light,Green
+2025-08-02,Colaba,11.9,Light,Green
+2025-08-03,Santacruz,8.6,Light,Green
+2025-08-03,Colaba,5.6,Light,Green
+2025-08-04,Santacruz,2.5,Light,Green
+2025-08-04,Colaba,2.8,Light,Green
+2025-08-05,Santacruz,4.9,Light,Green
+2025-08-05,Colaba,4.1,Light,Green
+2025-08-06,Santacruz,42.2,Moderate,Green
+2025-08-06,Colaba,35.3,Moderate,Green
+2025-08-07,Santacruz,44.1,Moderate,Green
+2025-08-07,Colaba,42.6,Moderate,Green
+2025-08-08,Santacruz,3.0,Light,Green
+2025-08-08,Colaba,2.4,Light,Green
+2025-08-09,Santacruz,22.6,Moderate,Green
+2025-08-09,Colaba,15.3,Light,Green
+2025-08-10,Santacruz,7.8,Light,Green
+2025-08-10,Colaba,5.4,Light,Green
+2025-08-11,Santacruz,2.5,Light,Green
+2025-08-11,Colaba,2.6,Light,Green
+2025-08-12,Santacruz,18.2,Moderate,Green
+2025-08-12,Colaba,10.5,Light,Green
+2025-08-13,Santacruz,11.1,Light,Green
+2025-08-13,Colaba,6.8,Light,Green
+2025-08-14,Santacruz,2.8,Light,Green
+2025-08-14,Colaba,2.1,Light,Green
+2025-08-15,Santacruz,22.1,Moderate,Green
+2025-08-15,Colaba,24.0,Moderate,Green
+2025-08-16,Santacruz,30.2,Moderate,Green
+2025-08-16,Colaba,18.4,Moderate,Green
+2025-08-17,Santacruz,4.0,Light,Green
+2025-08-17,Colaba,2.6,Light,Green
+2025-08-18,Santacruz,208.4,Extremely heavy,Red
+2025-08-18,Colaba,133.6,Very heavy,Orange
+2025-08-19,Santacruz,204.5,Extremely heavy,Red
+2025-08-19,Colaba,137.9,Very heavy,Orange
+2025-08-20,Santacruz,206.9,Extremely heavy,Red
+2025-08-20,Colaba,258.2,Extremely heavy,Red
+2025-08-21,Santacruz,8.7,Light,Green
+2025-08-21,Colaba,7.0,Light,Green
+2025-08-22,Santacruz,4.9,Light,Green
+2025-08-22,Colaba,3.8,Light,Green
+2025-08-23,Santacruz,6.1,Light,Green
+2025-08-23,Colaba,6.5,Light,Green
+2025-08-24,Santacruz,38.1,Moderate,Green
+2025-08-24,Colaba,43.4,Moderate,Green
+2025-08-25,Santacruz,3.1,Light,Green
+2025-08-25,Colaba,3.0,Light,Green
+2025-08-26,Santacruz,2.3,Light,Green
+2025-08-26,Colaba,1.6,Light,Green
+2025-08-27,Santacruz,11.0,Light,Green
+2025-08-27,Colaba,8.7,Light,Green
+2025-08-28,Santacruz,16.7,Moderate,Green
+2025-08-28,Colaba,12.4,Light,Green
+2025-08-29,Santacruz,13.6,Light,Green
+2025-08-29,Colaba,11.3,Light,Green
+2025-08-30,Santacruz,14.5,Light,Green
+2025-08-30,Colaba,14.6,Light,Green
+2025-08-31,Santacruz,39.3,Moderate,Green
+2025-08-31,Colaba,23.9,Moderate,Green
+2025-09-01,Santacruz,2.8,Light,Green
+2025-09-01,Colaba,1.8,Light,Green
+2025-09-02,Santacruz,3.9,Light,Green
+2025-09-02,Colaba,2.5,Light,Green
+2025-09-03,Santacruz,5.4,Light,Green
+2025-09-03,Colaba,3.6,Light,Green
+2025-09-04,Santacruz,11.0,Light,Green
+2025-09-04,Colaba,7.5,Light,Green
+2025-09-05,Santacruz,0.3,Light,Green
+2025-09-05,Colaba,0.2,Light,Green
+2025-09-06,Santacruz,5.6,Light,Green
+2025-09-06,Colaba,3.1,Light,Green
+2025-09-07,Santacruz,3.5,Light,Green
+2025-09-07,Colaba,2.3,Light,Green
+2025-09-08,Santacruz,4.2,Light,Green
+2025-09-08,Colaba,2.5,Light,Green
+2025-09-09,Santacruz,5.4,Light,Green
+2025-09-09,Colaba,5.1,Light,Green
+2025-09-10,Santacruz,26.4,Moderate,Green
+2025-09-10,Colaba,18.6,Moderate,Green
+2025-09-11,Santacruz,0.3,Light,Green
+2025-09-11,Colaba,0.4,Light,Green
+2025-09-12,Santacruz,20.9,Moderate,Green
+2025-09-12,Colaba,20.3,Moderate,Green
+2025-09-13,Santacruz,1.5,Light,Green
+2025-09-13,Colaba,1.2,Light,Green
+2025-09-14,Santacruz,8.8,Light,Green
+2025-09-14,Colaba,8.1,Light,Green
+2025-09-15,Santacruz,161.8,Very heavy,Orange
+2025-09-15,Colaba,135.8,Very heavy,Orange
+2025-09-16,Santacruz,228.3,Extremely heavy,Red
+2025-09-16,Colaba,160.4,Very heavy,Orange
+2025-09-17,Santacruz,2.1,Light,Green
+2025-09-17,Colaba,1.5,Light,Green
+2025-09-18,Santacruz,0.4,Light,Green
+2025-09-18,Colaba,0.3,Light,Green
+2025-09-19,Santacruz,0.1,Light,Green
+2025-09-19,Colaba,0.1,Light,Green
+2025-09-20,Santacruz,1.5,Light,Green
+2025-09-20,Colaba,1.1,Light,Green
+2025-09-21,Santacruz,6.1,Light,Green
+2025-09-21,Colaba,6.8,Light,Green
+2025-09-22,Santacruz,1.0,Light,Green
+2025-09-22,Colaba,0.9,Light,Green
+2025-09-23,Santacruz,1.9,Light,Green
+2025-09-23,Colaba,1.4,Light,Green
+2025-09-24,Santacruz,5.0,Light,Green
+2025-09-24,Colaba,3.9,Light,Green
+2025-09-25,Santacruz,0,No rain,Green
+2025-09-25,Colaba,0,No rain,Green
+2025-09-26,Santacruz,0,No rain,Green
+2025-09-26,Colaba,0,No rain,Green
+2025-09-27,Santacruz,4.9,Light,Green
+2025-09-27,Colaba,4.6,Light,Green
+2025-09-28,Santacruz,0,No rain,Green
+2025-09-28,Colaba,0,No rain,Green
+2025-09-29,Santacruz,0,No rain,Green
+2025-09-29,Colaba,0,No rain,Green
+2025-09-30,Santacruz,0,No rain,Green
+2025-09-30,Colaba,0,No rain,Green
