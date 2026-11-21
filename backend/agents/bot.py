@@ -17,6 +17,7 @@ from agents import geocoder, guard
 from rules import text as T
 
 RE_COMPLAINT = re.compile(r"BMC\d{2}-\d{6}", re.I)
+RE_TICKET = re.compile(r"CMP-\d{6}", re.I)
 RE_WO = re.compile(r"WO\d{2}-\d{5}", re.I)
 RE_ROAD = re.compile(r"RD\d{4}", re.I)
 DEV = re.compile(r"[ऀ-ॿ]")
@@ -41,6 +42,9 @@ def _norm(s):
 
 def resolve(conn, q: str) -> dict:
     q = (q or "").strip()
+    m = RE_TICKET.search(q)
+    if m:
+        return {"type": "ticket", "id": m.group(0).upper()}
     m = RE_COMPLAINT.search(q)
     if m:
         return {"type": "complaint", "id": m.group(0).upper()}
@@ -238,6 +242,25 @@ def answer_road(conn, rid: str, lang: str) -> dict | None:
             "resolved": {"type": "road", "id": rid}, "facts": {"road": rid}}
 
 
+def answer_ticket(conn, tid: str, lang: str) -> dict | None:
+    """A complaint raised in the app (CMP-...): public facts only."""
+    from live import text as LT
+    from live import tickets as TK
+    from live.common import LiveError
+    try:
+        x = TK.detail(conn, tid, None)
+    except LiveError:
+        return None
+    s = LT.TICKET_ANSWER["head"][lang].format(id=tid, category=T.category(x["category"], lang), ward=x["ward_code"],
+                                              date=_date(x["created_at"]), status=LT.STATUS[x["status"]][lang])
+    if x["task"]:
+        s += LT.TICKET_ANSWER["task"][lang].format(contractor=x["task"]["contractor_name"], task=x["task"]["task_id"])
+        if x["task"].get("approved_cost_inr") is not None:
+            s += LT.TICKET_ANSWER["cost"][lang].format(cost=T.inr(x["task"]["approved_cost_inr"]))
+    return {"answer": s, "citations": [], "rti_suggested": False, "resolved": {"type": "ticket", "id": tid},
+            "facts": {"ticket_id": tid, "status": x["status"]}}
+
+
 _SYSTEM = (
     "You answer a Mumbai citizen's question about a road complaint, using ONLY the facts in the JSON. "
     "Never invent or compute new numbers. If something is not in the facts, say: 'We don't have this information yet' "
@@ -269,6 +292,8 @@ def ask(conn, question: str, lang: str = "mr") -> dict:
         base = answer_work(conn, r["id"], lang)
     elif r["type"] == "road":
         base = answer_road(conn, r["id"], lang)
+    elif r["type"] == "ticket":
+        base = answer_ticket(conn, r["id"], lang)
     elif r["type"] == "candidates":
         out.update(answer=A["pick"][lang], candidates=r["complaints"], resolved=r)
         return out

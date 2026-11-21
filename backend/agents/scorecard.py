@@ -2,7 +2,7 @@
 
 Numbers are computed here, deterministically. Claude only phrases them (and the narrative is
 number-checked against the payload; on any mismatch we fall back to the template text).
-No composite score, grade or rank is ever produced.
+This module produces no score, grade or rank; the contractor's single transparent score lives in agents/score.py.
 """
 from __future__ import annotations
 

@@ -9,7 +9,9 @@ import config
 import db
 from agents import bot, budget, rti
 from agents import facts as Fx
+from agents import score as SCORE
 from agents import scorecard as S
+from live import tickets as live_tickets
 from app import schemas
 from app.deps import get_conn, lang_q, planner_ref
 from rules import text as T
@@ -157,6 +159,65 @@ def road(road_id: str, lang: str = Depends(lang_q), conn=Depends(get_conn)):
     return r
 
 
+_SECTION_CACHE: dict = {}
+NEAR_M = {"hospitals": 300.0, "schools": 200.0}
+
+
+def complaint_sections(conn) -> dict[str, str]:
+    """Section of every recorded complaint: 'hospitals' / 'schools' when it was reported within a few hundred metres of one
+    (facilities.csv), otherwise 'roads'. Cached per pipeline run."""
+    stamp = (str(config.DB_PATH), db.one(conn, "SELECT COALESCE(MAX(seq),0) s FROM audit_log WHERE action='pipeline_run'")["s"])
+    if _SECTION_CACHE.get("k") == stamp:
+        return _SECTION_CACHE["v"]
+    from pipeline.geo import dist_m
+    fac = [(f["type"], f["lat"], f["lon"]) for f in db.rows(conn, "SELECT type, lat, lon FROM facilities")]
+    out = {}
+    for r in db.rows(conn, "SELECT complaint_id, lat, lon FROM parsed_complaint"):
+        sec = "roads"
+        if r["lat"] is not None and r["lon"] is not None:
+            for kind, key in (("Hospital", "hospitals"), ("School", "schools")):
+                if any(dist_m(r["lat"], r["lon"], la, lo) <= NEAR_M[key] for t, la, lo in fac if t == kind
+                       if abs(la - r["lat"]) < 0.004 and abs(lo - r["lon"]) < 0.004):
+                    sec = key
+                    break
+        out[r["complaint_id"]] = sec
+    _SECTION_CACHE.update(k=stamp, v=out)
+    return out
+
+
+@router.get("/complaints")
+def complaints_list(ward: str | None = None, category: str | None = None, status: str | None = None, section: str | None = None,
+                    q: str | None = None, sort: str = "recent", limit: int = Query(30, le=100), offset: int = 0,
+                    lang: str = Depends(lang_q), conn=Depends(get_conn)):
+    """The recorded complaint history (the dataset), paginated and filterable: the same records Ask can look up."""
+    from agents import complaint_parser as cp
+    where, params = ["1=1"], []
+    if ward:
+        where.append("p.ward_code=?"); params.append(ward.replace("-", "/").upper())
+    if category in cp.CATEGORIES:
+        where.append("p.category=?"); params.append(category)
+    if status == "resolved":
+        where.append("p.link_status IN ('fixed','linked_via_issue')")
+    elif status:
+        where.append("p.link_status=?"); params.append(status)
+    if q and q.strip():
+        where.append("(c.complaint_id LIKE ? OR p.locality LIKE ?)"); params += [f"%{q.strip()[:40]}%"] * 2
+    order = "c.upvotes DESC, c.received_at DESC" if sort == "upvotes" else "c.received_at DESC, c.complaint_id DESC"
+    base = ("FROM complaints c JOIN parsed_complaint p ON p.complaint_id=c.complaint_id "
+            "LEFT JOIN work_orders w ON w.work_order_id=p.work_order_id WHERE " + " AND ".join(where))
+    cols = ("SELECT c.complaint_id, c.received_at, c.channel, c.upvotes, p.category, p.ward_code, p.locality, p.link_status, "
+            "w.contractor_id, w.contractor_name ")
+    secs = complaint_sections(conn)
+    if section in live_tickets.SECTIONS:
+        rows = [r for r in db.rows(conn, f"{cols}{base} ORDER BY {order}", params) if secs.get(r["complaint_id"], "roads") == section]
+        total, rows = len(rows), rows[offset:offset + limit]
+    else:
+        total = db.one(conn, f"SELECT COUNT(*) n {base}", params)["n"]
+        rows = db.rows(conn, f"{cols}{base} ORDER BY {order} LIMIT ? OFFSET ?", params + [limit, offset])
+    return {"total": total, "items": [{**r, "category_label": T.category(r["category"], lang),
+                                       "section": secs.get(r["complaint_id"], "roads")} for r in rows]}
+
+
 @router.get("/complaints/{cid}")
 def complaint(cid: str, lang: str = Depends(lang_q), conn=Depends(get_conn)):
     t = Fx.complaint_timeline(conn, cid, lang)
@@ -164,17 +225,26 @@ def complaint(cid: str, lang: str = Depends(lang_q), conn=Depends(get_conn)):
         raise HTTPException(404, "Unknown complaint")
     t["findings"] = [schemas.PublicFinding(**f).model_dump() for f in t["findings"]]
     t["category_label"] = T.category(t["category"], lang)
+    t["section"] = complaint_sections(conn).get(cid, "roads")
     return t
 
 
+def _score_block(name: str, s: dict | None, lang: str) -> dict | None:
+    if not s:
+        return None
+    return {**s, "band_label": SCORE.BAND_LABEL[s["band"]][lang], "verdict": SCORE.verdict(name, s, lang)}
+
+
 @router.get("/contractors")
-def contractors(conn=Depends(get_conn)):
+def contractors(lang: str = Depends(lang_q), conn=Depends(get_conn)):
     out = []
-    for c in db.rows(conn, "SELECT * FROM contractors ORDER BY contractor_name"):    # alphabetical: no ranking
+    scores = SCORE.contractor_scores(conn)
+    for c in db.rows(conn, "SELECT * FROM contractors ORDER BY contractor_name"):    # alphabetical: the list is not ranked
         n = db.one(conn, "SELECT COUNT(*) n, SUM(cost_inr) s FROM work_orders WHERE contractor_id=?", (c["contractor_id"],))
         clean = db.one(conn, "SELECT COUNT(*) n FROM finding WHERE contractor_id=? AND rule='clean_record'", (c["contractor_id"],))["n"]
         out.append({"contractor_id": c["contractor_id"], "name": c["contractor_name"], "empanelled_since": c["empanelled_since"],
-                    "jobs": n["n"], "billed_inr": n["s"], "clean_record_wards": clean})
+                    "jobs": n["n"], "billed_inr": n["s"], "clean_record_wards": clean,
+                    "score": _score_block(c["contractor_name"], scores.get(c["contractor_id"]), lang)})
     return out
 
 
@@ -184,6 +254,7 @@ def scorecard(cid: str, lang: str = Depends(lang_q), conn=Depends(get_conn)):
     if not card:
         raise HTTPException(404, "Unknown contractor")
     card["narrative"] = S.contractor_narrative(conn, card, lang)
+    card["score"] = _score_block(card["name"], SCORE.contractor_score(conn, cid), lang)
     card["context_note"] = card["context_note"][lang]
     card["clean_record"] = [{"ward_code": c["ward_code"], "text": c[f"public_text_{lang}"], "finding_id": c["finding_id"],
                              "metrics": json.loads(c["metrics_json"])} for c in card["clean_record"]]
@@ -194,9 +265,11 @@ def scorecard(cid: str, lang: str = Depends(lang_q), conn=Depends(get_conn)):
 
 @router.get("/findings", response_model=list[schemas.PublicFinding])
 def findings(subject_type: str | None = None, subject_id: str | None = None, ward: str | None = None, rule: str | None = None,
+             contractor: str | None = None, polarity: str | None = None,
              lang: str = Depends(lang_q), limit: int = Query(50, le=200), conn=Depends(get_conn)):
     where, params = ["1=1"], []
-    for col, v in (("subject_type", subject_type), ("subject_id", subject_id), ("ward_code", ward), ("rule", rule)):
+    for col, v in (("subject_type", subject_type), ("subject_id", subject_id), ("ward_code", ward), ("rule", rule),
+                   ("contractor_id", contractor), ("polarity", polarity)):
         if v:
             where.append(f"{col}=?"); params.append(v)
     rows = db.rows(conn, f"SELECT * FROM finding WHERE {' AND '.join(where)} ORDER BY CASE severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 "

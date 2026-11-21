@@ -30,7 +30,7 @@ export default function NotingEditor({ workId, onClose }: { workId: string; onCl
     let live = true;
     setLoading(true);
     setError(null);
-    api<Draft>(`/officer/draft-noting/${workId}?lang=${lang}`, { method: "POST", role: "officer", user: "ae-4471" })
+    api<Draft>(`/officer/draft-noting/${workId}?lang=${lang}`, { method: "POST" })
       .then((d) => {
         if (!live) return;
         setDraft(d);

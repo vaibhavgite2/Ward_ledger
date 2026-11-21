@@ -2,7 +2,8 @@
 import { Fragment, useState } from "react";
 import { API, api, useApi } from "@/lib/api";
 import { useLang } from "@/lib/i18n";
-import { useRole } from "@/lib/role";
+import { getToken, useAuth } from "@/lib/auth";
+import { NeedLogin } from "@/components/live/bits";
 import { ErrorBox, Loading } from "@/components/Ui";
 
 const LIMIT = 100;
@@ -102,10 +103,53 @@ function ActionLog() {
   );
 }
 
+/** The complaint/task tracking log (ticket_event): same rules as the fact log, raw rows only. */
+function LiveLog() {
+  const { t } = useLang();
+  const [open, setOpen] = useState(false);
+  const [entity, setEntity] = useState("");
+  const [applied, setApplied] = useState("");
+  const [v, setV] = useState<string | null>(null);
+  const { data } = useApi<{ total: number; items: any[] }>(open ? `/audit/live?limit=200${applied ? `&entity=${encodeURIComponent(applied)}` : ""}` : null);
+  const verify = async () => {
+    const r = await api<any>("/audit/live/verify");
+    setV(r.ok ? t("audit.verifyOk", { n: r.checked, h: (r.head_hash || "").slice(0, 16) }) : t("audit.verifyBroken", { s: r.first_broken_seq, n: r.checked }));
+  };
+  return (
+    <div className="mb-3 border border-gray-400 p-1.5">
+      <button type="button" className="font-bold underline" onClick={() => setOpen(!open)} aria-expanded={open}>
+        {t("audit.liveTitle")}
+      </button>
+      {open && (
+        <div className="mt-1">
+          <p className="mb-1">{t("audit.liveSub")}</p>
+          <div className="mb-1 flex flex-wrap gap-2">
+            <input value={entity} onChange={(e) => setEntity(e.target.value)} placeholder="CMP-000001 / TSK-000001" className="border border-gray-400 bg-white px-1 py-0.5 font-mono text-[11px]" />
+            <button type="button" className="border border-black px-2" onClick={() => setApplied(entity.trim())}>
+              {t("audit.apply")}
+            </button>
+            <button type="button" className="border border-black px-2" onClick={verify}>
+              {t("audit.verify")}
+            </button>
+            {v && <span>{v}</span>}
+          </div>
+          {data && (
+            <pre className="overflow-x-auto whitespace-pre">
+              {data.items
+                .map((r) => `${r.seq}  ${r.at}  ${r.entity_type}:${r.entity_id}  ${r.event}  ${r.from_status ?? "-"} -> ${r.to_status ?? "-"}  ${r.actor_id}  ${r.row_hash.slice(0, 12)}`)
+                .join("\n")}
+            </pre>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function AuditPage() {
   const { t } = useLang();
-  const { role } = useRole();
-  const ok = role === "auditor";
+  const { user, ready } = useAuth();
+  const ok = user?.role === "officer";
   const [draft, setDraft] = useState<Filters>(EMPTY);
   const [applied, setApplied] = useState<Filters>(EMPTY);
   const [offset, setOffset] = useState(0);
@@ -120,13 +164,14 @@ export default function AuditPage() {
     ok ? `/audit?${qs(applied, { limit: LIMIT, offset })}` : null
   );
 
-  if (!ok) return <p role="alert" className="border border-black p-2 font-mono text-sm">{t("audit.needRole")}</p>;
+  if (!ready) return <Loading />;
+  if (!ok) return <NeedLogin role="officer" next="/audit" message={t("audit.needLogin")} />;
 
   const doVerify = async () => {
     setBusy(true);
     setVerify(t("audit.verifying"));
     try {
-      const v = await api<any>("/audit/verify", { role: "auditor" });
+      const v = await api<any>("/audit/verify");
       setVerifyBad(!v.ok);
       setVerify(
         v.ok
@@ -146,7 +191,7 @@ export default function AuditPage() {
     try {
       const params = new URLSearchParams({ format: "csv" });
       for (const [k, v] of Object.entries(applied)) if (v && ["ward", "contractor", "from", "to", "field"].includes(k)) params.set(k, v);
-      const res = await fetch(`${API}/audit/export?${params}`, { headers: { "X-Role": "auditor" } });
+      const res = await fetch(`${API}/audit/export?${params}`, { headers: { Authorization: `Bearer ${getToken()}` } });
       if (!res.ok) throw new Error(res.statusText);
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
@@ -170,6 +215,7 @@ export default function AuditPage() {
     <div className="font-mono text-[11px] leading-snug">
       <h1 className="text-base font-bold">{t("audit.title")}</h1>
       <p className="mb-2 max-w-3xl">{t("audit.sub")}</p>
+      <LiveLog />
 
       <form
         className="mb-2 flex flex-wrap items-end gap-2"

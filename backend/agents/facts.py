@@ -119,7 +119,9 @@ def complaint_timeline(conn, cid: str, lang="en") -> dict | None:
     asof = datetime.fromisoformat(config.AS_OF)
     events = [{"kind": "received", "at": c["received_at"], "channel": c["channel"]}]
     if wo:
-        events += [{"kind": "assigned", "at": wo["assigned_at"]}, {"kind": "started", "at": wo["work_started_at"]},
+        events += [{"kind": "assigned", "at": wo["assigned_at"], "contractor_id": wo["contractor_id"],
+                    "contractor_name": wo["contractor_name"]},
+                   {"kind": "started", "at": wo["work_started_at"]},
                    {"kind": "completed", "at": wo["completed_at"]}]
     events.sort(key=lambda e: e["at"] or "")          # always chronological, whatever the data order
     filed_after = bool(wo and wo["completed_at"] and c["received_at"] > wo["completed_at"])

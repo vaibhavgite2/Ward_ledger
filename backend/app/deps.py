@@ -7,8 +7,10 @@ from fastapi import Depends, Header, HTTPException, Query
 
 import db
 from agents import budget
+from live import users
+from live.common import Viewer
 
-LANGS = ("mr", "en", "hi")
+LANGS = ("en", "mr", "hi")
 
 
 def get_conn():
@@ -19,21 +21,31 @@ def get_conn():
         conn.close()
 
 
-def lang_q(lang: str = Query("mr", description="mr | en | hi")) -> str:
+def lang_q(lang: str = Query("en", description="en | mr | hi")) -> str:
     return lang if lang in LANGS else "en"
 
 
-def require_role(*allowed: str):
-    """Demo-only role gate (SPEC §7): X-Role: public | officer | auditor. Replace with SSO in Phase 2."""
-    def dep(x_role: str = Header("public")) -> str:
-        if x_role not in allowed:
-            raise HTTPException(status_code=403, detail=f"This endpoint requires role: {' or '.join(allowed)}")
-        return x_role
+def bearer_token(authorization: str | None = Header(None)) -> str | None:
+    if authorization and authorization[:7].lower() == "bearer ":
+        return authorization[7:].strip() or None
+    return None
+
+
+def viewer_opt(token: str | None = Depends(bearer_token), conn=Depends(get_conn)) -> Viewer | None:
+    """The logged-in person, or None. Browsing never requires a login."""
+    return users.viewer_for_token(conn, token)
+
+
+def require(*roles: str):
+    """Role-based access from the session (DFD 1.1-1.3). The client cannot claim a role: it comes from the
+    account that logged in on that role's panel."""
+    def dep(v: Viewer | None = Depends(viewer_opt)) -> Viewer:
+        if v is None:
+            raise HTTPException(status_code=401, detail="Please log in.", headers={"WWW-Authenticate": "Bearer"})
+        if roles and v.role not in roles:
+            raise HTTPException(status_code=403, detail=f"This needs a {' or '.join(roles)} login.")
+        return v
     return dep
-
-
-def actor(x_user: str = Header("ae-demo")) -> str:
-    return "user:" + "".join(ch for ch in x_user if ch.isalnum() or ch in "-_")[:24]
 
 
 _REF: dict = {}

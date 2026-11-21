@@ -45,10 +45,10 @@ def test_hash_chain_verifies_and_detects_tampering(db_copy):
     assert v["ok"] is False and v["first_broken_seq"] is not None
 
 
-def test_human_promotion_appends_a_new_fact_with_named_officer(client, conn):
-    item = client.get("/api/officer/review-queue?limit=1", headers={"X-Role": "officer"}).json()["items"][0]
+def test_human_promotion_appends_a_new_fact_with_named_officer(client, conn, tokens):
+    item = client.get("/api/officer/review-queue?limit=1", headers=tokens["officer"]).json()["items"][0]
     before = db.one(conn, "SELECT COUNT(*) n FROM fact")["n"]
-    r = client.post(f"/api/officer/review/{item['item_id']}", json={"action": "approve"}, headers={"X-Role": "officer", "X-User": "ae-4471"})
+    r = client.post(f"/api/officer/review/{item['item_id']}", json={"action": "approve"}, headers=tokens["officer"])
     assert r.status_code == 200 and r.json()["decided_by"] == "user:ae-4471"
     c2 = db.connect()
     assert db.one(c2, "SELECT COUNT(*) n FROM fact")["n"] == before + 1

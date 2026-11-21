@@ -33,17 +33,20 @@ def test_public_routes_expose_no_officer_or_pii_fields(client, path):
     assert "Risk flag" not in r.text
 
 
-def test_officer_and_audit_routes_are_gated(client):
+def test_officer_and_audit_routes_are_gated(client, tokens):
     for path in ("/api/officer/flags", "/api/officer/review-queue", "/api/audit", "/api/audit/verify", "/api/audit/export"):
-        assert client.get(path).status_code == 403
-        assert client.get(path, headers={"X-Role": "public"}).status_code == 403
-    assert client.get("/api/officer/flags?limit=1", headers={"X-Role": "officer"}).status_code == 200
-    assert client.get("/api/audit?limit=1", headers={"X-Role": "officer"}).status_code == 403     # officers are not auditors
-    assert client.post("/api/officer/draft-noting/WO25-00017", headers={"X-Role": "public"}).status_code == 403
+        assert client.get(path).status_code == 401                                   # not logged in
+        assert client.get(path, headers={"X-Role": "officer"}).status_code == 401    # a self-declared role is ignored
+        assert client.get(path, headers=tokens["citizen"]).status_code == 403
+        assert client.get(path, headers=tokens["ct05"]).status_code == 403
+        assert client.get(path, headers={"Authorization": "Bearer not-a-real-token"}).status_code == 401
+    assert client.get("/api/officer/flags?limit=1", headers=tokens["officer"]).status_code == 200
+    assert client.get("/api/audit?limit=1", headers=tokens["auditor"]).status_code == 200
+    assert client.post("/api/officer/draft-noting/WO25-00017", headers=tokens["citizen"]).status_code == 403
 
 
-def test_officer_findings_use_risk_flag_framing(client):
-    items = client.get("/api/officer/flags?limit=5", headers={"X-Role": "officer"}).json()["items"]
+def test_officer_findings_use_risk_flag_framing(client, tokens):
+    items = client.get("/api/officer/flags?limit=5", headers=tokens["officer"]).json()["items"]
     assert items and all(i["flag_label"] for i in items)
 
 
@@ -74,14 +77,19 @@ def test_number_guard():
     assert guard.unsupported_numbers("47% and 61%", payload) == ["61"]
 
 
-def test_scorecards_have_no_score_grade_or_rank(client):
+def test_scorecards_have_a_transparent_score_but_no_grade_or_rank(client):
+    """The product shows ONE transparent 0-100 score per contractor (agents/score.py: fixed weights over three published
+    measures, context-adjusted, always shown with its inputs). It still never ranks, grades or letter-rates contractors."""
     for cid in ("CT01", "CT03", "CT05"):
         j = client.get(f"/api/contractors/{cid}/scorecard?lang=en").json()
-        assert not (set(_keys(j)) & {"score", "grade", "rank", "rating"})
+        assert not (set(_keys(j)) & {"grade", "rank", "rating", "stars"})
+        assert j["score"]["score"] is not None and j["score"]["weights"] and j["score"]["context_adjusted"]
         assert j["narrative"]["text"] and not guard.banned_words(j["narrative"]["text"])
         assert guard.numbers_ok(j["narrative"]["text"], j["metrics"])
-    names = [c["name"] for c in client.get("/api/contractors").json()]
-    assert names == sorted(names)                                                    # alphabetical, never ranked
+    rows = client.get("/api/contractors").json()
+    names = [c["name"] for c in rows]
+    assert names == sorted(names)                                                    # alphabetical, never ordered by score
+    assert [c["score"]["score"] for c in rows] != sorted((c["score"]["score"] for c in rows), reverse=True)
 
 
 def test_scorecard_does_not_praise_a_contractor_below_expectation(conn):
@@ -138,8 +146,8 @@ def test_ask_bot_and_rti(client, conn):
     assert "fraud" not in r["text_en"].lower()
 
 
-def test_audit_chain_and_export(client):
-    h = {"X-Role": "auditor"}
+def test_audit_chain_and_export(client, tokens):
+    h = tokens["auditor"]
     v = client.get("/api/audit/verify", headers=h).json()
     assert v["ok"] and v["checked"] > 20000
     ch = client.get("/api/audit/WO25-00017/chain", headers=h).json()
@@ -150,11 +158,11 @@ def test_audit_chain_and_export(client):
     assert a["items"] and all(i["field_path"] == "cost_inr" and i["source_file"] == "work_orders.csv" for i in a["items"])
 
 
-def test_right_of_reply_round_trip(client):
+def test_right_of_reply_round_trip(client, tokens):
     f = client.get("/api/findings?rule=rate_card_overrun&limit=1").json()[0]
     assert f["reply"] is None
     assert client.post("/api/officer/reply", json={"finding_id": f["finding_id"], "reply_text": "Site conditions differed."},
-                       headers={"X-Role": "officer"}).status_code == 200
+                       headers=tokens["officer"]).status_code == 200
     again = client.get(f"/api/findings?rule=rate_card_overrun&limit=1").json()[0]
     assert again["reply"]["text"] == "Site conditions differed."
 

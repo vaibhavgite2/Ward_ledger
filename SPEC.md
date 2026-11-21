@@ -59,8 +59,8 @@ It has three faces that read **one shared fact layer**:
 | Harvester, OCR Extractor, Vision Table Reconstructor | Dataset has no PDFs, only CSV/GeoJSON | Phase 1 (real BMC PDFs) |
 | GSTIN/PAN entity resolution, adjudication queue | `contractors.csv` has 8 clean, canonical rows | Phase 1 |
 | PostGIS / pg_trgm | Replaced by shapely + haversine + rapidfuzz in Python | When data > single ward/city CSV scale |
-| Citizen photo upload, offline queue | No real photos; needs auth + storage | Stretch |
-| Auth / SSO | Demo uses a role switcher (header `X-Role`) | Phase 2 |
+| Offline photo queue | Needs a service worker and background sync | Stretch (photo/video upload itself: built, §16) |
+| SSO / SMS OTP login | Built instead: three password login panels over one user table (§16); SSO and OTP need a government IdP / SMS gateway | Phase 2 |
 | Live portal harvesting | Synthetic dataset only | Phase 1 |
 
 ### 2.3 Doc-vs-data reconciliation
@@ -307,7 +307,7 @@ Rules:
 | Warranty | # WOs billed on DLP roads | — |
 | Findings | Count by rule + clean-record wards | — |
 
-**No composite score, grade or rank** on public pages. Contractors are listed alphabetically. Sorting by a metric is allowed, with that metric visible.
+**Civic trust score (added on request).** Each contractor card shows one 0-100 score, computed deterministically in `agents/score.py` (no model writes or changes it): `40% x repairs that held beyond 30 days + 35% x jobs finished on time + 25% x bills within the standard rate`. Durability and on-time are context-adjusted (compared with what is expected for the same mix of urgent jobs, methods, low-lying wards and heavy-rain weeks; the card shows the job-weighted flood index). Tasks handled through the app count too: an approved task finished after its deadline, and a task still open past its deadline, count as not on time. Bands: 80+ "Reliable", 65-79 "Mixed record", below 65 "Below expected". The score is always shown with its three inputs, the weights and the sample size, and contractors keep their right of reply. **No letter grade, star rating or rank**: contractors are listed alphabetically; sorting by a metric is allowed, with that metric visible.
 
 **Narrative:** Claude Sonnet writes ≤ 120 words, citizen-readable, from a JSON of the metrics above. Prompt from [STARTER_IDEAS.md](STARTER_IDEAS.md#prompts-to-start-with) plus: "Use only the numbers provided; mention context adjustments; include one strength and one thing to improve; no accusations." Post-check: every number in the output must appear in the input JSON (§9.4).
 
@@ -382,7 +382,7 @@ Claude Haiku classifies `social_posts` into `genuine_complaint | thank_you | sar
 
 ## 7. API (FastAPI, `backend/app/`)
 
-Base `/api`. JSON. Role via header `X-Role: public | officer | auditor` (default `public`; demo-only). Language via `?lang=mr|en|hi`.
+Base `/api`. JSON. Identity via `Authorization: Bearer <token>` from one of the three login panels (§16); no token means the public view. Language via `?lang=mr|en|hi`.
 
 | Method | Path | Role | Returns |
 |---|---|---|---|
@@ -446,7 +446,7 @@ Public endpoints are serialised through `PublicFinding` Pydantic models that **e
 | `/officer/[ward]/budget` | Officer | Planner with factor bars, method, cumulative ₹ vs 80% cap |
 | `/audit` | Auditor | Monospace log table, filters, verify chain, export |
 
-The officer and auditor routes sit behind the demo role switcher (header menu). Their visual style is denser (desktop 1366×768).
+The officer routes (including the audit trail) need an officer login (§16). Their visual style is denser (desktop 1366×768).
 
 ---
 
@@ -479,7 +479,7 @@ For any narrative output: extract all numerals (incl. ₹, %, Devanagari digits 
 
 | Principle | Implementation |
 |---|---|
-| Facts, not verdicts | Template-rendered public finding text, banned-word test, no composite score or rank |
+| Facts, not verdicts | Template-rendered public finding text, banned-word test; the one contractor score is a published formula over recorded work, never a rank or grade |
 | Model never writes facts | Claude → `claim`; only rules/humans → `fact`; unverified claims labelled and excluded from findings |
 | Balance | Mandatory `clean_record` positive finding, strengths in every scorecard narrative |
 | Context before blame | Low-lying ward and heavy-rain-week adjustments on cost, durability and drift, shown in `context` |
@@ -569,7 +569,7 @@ Cut order if behind: social classifier → map colouring → audit verify → of
 1. A citizen enters complaint **BMC25-xxxxxx** (seeded: pothole, fix failed, road under DLP). The timeline shows the contractor, ₹ billed, "failed within 30 days", and "road under warranty, billed to BMC".
 2. Tap **Request documents (RTI)** → bilingual Section 6(1) draft, PIO, fee and due date → print.
 3. Ward page: "₹X of this ward's monsoon budget went to repairs that failed within 30 days". Then **What gets fixed next** with plain reasons (school, flood spot).
-4. Contractor page: fair scorecard with context adjustment and a clean-record badge in another ward. No grades.
+4. Contractor page: civic trust score with its three inputs, context adjustment and a clean-record badge in another ward. No grades or ranks.
 5. Switch role → officer: the same WO shows numbered risk flags → **Draft noting** → cited Marathi note-sheet. Switch to auditor: the same figure traces to the CSV row and sha256.
 
 ---
@@ -601,7 +601,7 @@ cd ../frontend && npm install && npm run dev     # http://localhost:3000
 cd ../backend && .venv/Scripts/python -m pytest  # 57 tests
 cd ../frontend && node scripts/check-i18n.mjs && npx tsc --noEmit
 ```
-Use the **View as** menu in the header to switch Citizen / Officer / Auditor (demo-only role gate, §7).
+Log in from the header with one of the three panels (§16); browsing needs no login. Demo accounts: `python -m live.seed --demo --tickets`.
 No `ANTHROPIC_API_KEY` is needed: every Claude path has a deterministic fallback (§9).
 
 ### 15.2 Built and verified
@@ -632,7 +632,102 @@ complaints, 435 issues with no repair linked, and ₹3.07 Cr of ₹13.4 Cr bille
 | Audit `ward` filter | - | Takes `K/E` (slash) while other routes also accept `K-E` | Known inconsistency (audit page uses a plain text field). |
 
 ### 15.4 Known limits
-- Not exercised: live Claude calls (§15.3), offline photo queue, real auth/SSO, official ward boundaries (Voronoi approximation).
+- Not exercised: live Claude calls (§15.3), offline photo queue, SSO / SMS OTP, official ward boundaries (Voronoi approximation).
 - The review queue is large (about 1,700 pending) because every disagreement between a parsed claim and its sources is queued, by design.
 - Thresholds in `backend/rules/config.yaml` are starting values; tune against the judges' answer key once published.
 - The `POST /api/rti-draft` text is for demonstration only (synthetic records); PIO details must be verified before real use.
+
+---
+
+## 16. Accounts, complaint tickets and tasks (the DFD workflow)
+
+Implements the supplied data-flow diagrams: three login processes (1.1 Citizen, 1.2 Officer, 1.3 Contractor) replacing
+"1.0 User Authentication", and 2.0 Raise Complaint → 3.0 Verify → 4.0 Assign Contractor → 5.0 Submit Repair Report →
+6.0 Review & Update Status, over a User database (D1), Complaint database (D2) and Repair Evidence & Bills store (D3).
+
+### 16.1 Logins and roles
+- **No login is ever needed to browse.** The citizen login appears only when someone raises a complaint; the officer and
+  contractor panels are reached from **Log in**. Each role, once logged in, lands on its own panel and still sees every
+  public page.
+- **Three panels, one user table** (`app_user`, role ∈ citizen | officer | contractor). Each panel's endpoint
+  (`POST /api/auth/{role}/login`) authenticates only that role. Citizens self-register with a mobile number and password
+  (purpose stated at capture, consent required; the number is never shown publicly and the API only returns it masked).
+  Officers and contractors are provisioned; contractor accounts are linked to an empanelled `contractor_id`.
+- Passwords: scrypt with a per-user salt. Sessions: random bearer tokens stored only as SHA-256, with expiry (citizen 14
+  days, officer 12 h, contractor 3 days) and revocation on logout. Failed logins are throttled (5 per 15 minutes per
+  account) and errors never reveal whether an account exists.
+- The client cannot claim a role: the old `X-Role` header is ignored and role checks run server-side on every request.
+- **Separation of duties:** officer accounts with `can_act = 0` (the seeded Chief Auditor account) can see the console and
+  audit trail but cannot verify, assign, approve or promote anything, and receive no operational notifications.
+
+### 16.2 Complaint ticket (`CMP-000001`) and task (`TSK-000001`) lifecycles
+| Ticket status | Set by | Next |
+|---|---|---|
+| `submitted` | Citizen raises it: category, description, 1 to 5 locations (GPS or map pins) and/or a locality, up to 6 photos and 2 videos | `verified`, `rejected` or `duplicate` (officer) |
+| `verified` | Officer, who may correct the category, and sees our parser's reading of the text and nearby possible duplicates | `assigned` when put in a task |
+| `assigned` → `in_progress` → `work_submitted` | Officer creates a task; contractor starts it; contractor submits the repair report | Officer review |
+| `resolved` | Officer approves the task's report: **every complaint in the task, and complaints closed as duplicates of them, are resolved and their citizens notified** | Final |
+| `rejected` / `duplicate` | Officer, with a reason: not a BMC road, not a road issue, not enough information, duplicate of CMP-x, or other (with a note) | Final; a duplicate resolves with its original |
+
+A task bundles one or more verified complaints **from one ward** for one contractor: `assigned → in_progress → submitted
+→ completed`, or `submitted → rework` (sent back with a reason) → resubmitted, or `cancelled` (its complaints return to
+the verified pool). A complaint can be in only one active task; this is re-checked inside the write lock.
+
+### 16.3 Accountability built into the workflow
+- **Pre-award checks** (the Risk Flagger of agents.md §9) when the officer picks a contractor: on-time rate and 30-day
+  durability against what is expected for the same mix of jobs, past bills above the rate-card range, findings in this
+  ward, a clean-record certificate where earned, and any complaint whose road is still under another contractor's
+  warranty (DLP). The suggested method has the lowest observed reopen rate, with no cold mix on busy roads. The estimate
+  is the rate card × typical area in the ward, and the due date is the SLA of the most urgent complaint. The checks shown
+  are recorded in the task's log.
+- **Report checks** when the contractor submits: bill vs standard rate for the reported method and area (the same 1.30×
+  rule as §6.4), bill vs task estimate, DLP roads, and missing evidence or bill documents. Neutral statements, never verdicts.
+- The approved bill becomes public on the complaint once the officer approves (award values are public). Pending bills
+  and bill documents never are.
+- Contractors reply to findings about their own firm from their panel, and the reply is shown next to the finding.
+
+### 16.4 Privacy and evidence
+- Public views never include the citizen's identity. Descriptions are scrubbed of phone numbers, e-mail addresses and
+  vehicle registration numbers, and locations are rounded to about 100 m. The owner, officers and the assigned contractor
+  see the exact points and the original text.
+- File types are decided by content (magic bytes), with size and count limits. Photo originals keep their metadata
+  internally; the **only** public copy is re-encoded with orientation applied and EXIF/GPS removed. Videos and bills are
+  never public. Private files are served through 1-hour HMAC-signed links (`Content-Security-Policy: sandbox`, `nosniff`).
+- Photos of rejected complaints are not public. Repair after-photos become public when the work is approved.
+- A citizen photo is an inspection prompt, not proof (stated on the form).
+
+### 16.5 Records
+- Live tables (`app_user`, `auth_session`, `ticket`, `ticket_location`, `media`, `task`, `task_ticket`, `repair_report`,
+  `notification`, `ticket_event`) are created on API start and are **never** dropped by `pipeline.run --force`.
+- `ticket_event` is the tracking log for both tickets and tasks: append-only (UPDATE and DELETE blocked by triggers) and
+  hash-chained like `fact`. Every write takes SQLite's write lock first (`BEGIN IMMEDIATE`), so concurrent requests cannot
+  fork the chain or reuse IDs. Officers verify it from the audit trail (`GET /api/audit/live/verify`).
+- In-app notifications, stored as kind + parameters and rendered in the reader's language, implement the DFD's
+  acknowledgement, verification-status, assignment and resolution flows.
+
+### 16.6 API (additions)
+`POST /api/auth/{citizen|officer|contractor}/login`, `POST /api/auth/citizen/register`, `POST /api/auth/logout`, `GET /api/auth/me` ·
+`GET|POST /api/tickets`, `GET /api/tickets/{id}`, `POST /api/tickets/{id}/verify|reject` ·
+`GET|POST /api/tasks`, `POST /api/tasks/preview`, `GET /api/tasks/{id}`, `POST /api/tasks/{id}/start|report|approve|send-back|cancel` ·
+`GET /api/me/notifications`, `POST /api/me/notifications/read` · `POST /api/contractor/reply` ·
+`GET /api/media/{id}/public|original` · `GET /api/live/options` · `GET /api/audit/live`, `GET /api/audit/live/verify`.
+
+### 16.7 Verification
+`backend/tests/test_live.py` covers:
+- panel and role isolation, registration rules, logout, throttling, hashed storage, and public browsing with bogus tokens;
+- uploads: a planted EXIF marker is absent from the public copy, orientation is kept, the original is retained, HTML
+  disguised as a JPEG is rejected, and limits are enforced;
+- signed links: tampered and expired links are refused, and videos are never public;
+- PII scrubbing; verification by acting officers only; duplicates resolving with their original;
+- the full assign → report → approve flow resolving every complaint; send-back and cancel; notifications; contractor
+  right of reply;
+- tamper detection on the event log, live data surviving a pipeline rebuild, and 8 concurrent complaints without a
+  forked log or duplicate IDs.
+
+Mutation checks: re-introducing EXIF in public copies, letting the auditor act, making videos public, or trusting `X-Role`
+again each make the suite fail. `frontend/e2e/workflow.mjs` drives the whole DFD in a real browser.
+
+### 16.8 Not done
+SMS OTP or SSO; e-mail or SMS notifications (in-app only); the offline photo queue; a citizen "the problem came back"
+reopen within 30 days (the natural next step for the durability metric); RTI drafts for `CMP-` complaints (RTI covers the
+2025 records).

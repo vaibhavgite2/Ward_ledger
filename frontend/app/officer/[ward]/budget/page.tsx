@@ -4,7 +4,8 @@ import { useParams } from "next/navigation";
 import { Fragment, useState } from "react";
 import { useApi } from "@/lib/api";
 import { useLang } from "@/lib/i18n";
-import { useRole } from "@/lib/role";
+import { useAuth } from "@/lib/auth";
+import OfficerShell from "@/components/officer/OfficerShell";
 import { inr, rupee, wardCode, wardSlug } from "@/lib/format";
 import { ErrorBox, Loading, Progress, Stat } from "@/components/Ui";
 
@@ -57,16 +58,16 @@ function Factors({ item, label }: { item: Item; label: (k: string) => string }) 
 export default function BudgetPage() {
   const params = useParams<{ ward: string }>();
   const { t } = useLang();
-  const { role } = useRole();
+  const { user } = useAuth();
   const code = wardCode(params.ward);
   const slug = wardSlug(code);
-  const ok = role === "officer";
+  const ok = user?.role === "officer";
   const [input, setInput] = useState("");
   const [asOf, setAsOf] = useState("");
   const path = ok ? `/officer/budget/${slug}${asOf ? `?as_of=${asOf}` : ""}` : null;
   const { data, error, loading, reload } = useApi<any>(path);
 
-  if (!ok) return <p role="alert" className="card border-amber-300 bg-amber-50 text-sm">{t("officer.needRole")}</p>;
+  if (!ok) return <OfficerShell ward={params.ward}>{null}</OfficerShell>;
 
   const items: Item[] = data?.items ?? [];
   const firstUnfunded = items.findIndex((i) => !i.funded);

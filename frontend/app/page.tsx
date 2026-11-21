@@ -10,6 +10,8 @@ import { ErrorBox, Loading, PageTitle, Stat } from "@/components/Ui";
 const RE_COMPLAINT = /^BMC\d{2}-\d{6}$/i;
 const RE_WO = /^WO\d{2}-\d{5}$/i;
 const RE_ROAD = /^RD\d{4}$/i;
+const RE_TICKET = /^CMP-\d{6}$/i;
+const RE_TASK = /^TSK-\d{6}$/i;
 
 export default function Home() {
   const { t, lang } = useLang();
@@ -24,7 +26,9 @@ export default function Home() {
     e.preventDefault();
     const s = q.trim();
     if (!s) return;
-    if (RE_COMPLAINT.test(s)) router.push(`/complaint/${s.toUpperCase()}`);
+    if (RE_TICKET.test(s)) router.push(`/ticket/${s.toUpperCase()}`);
+    else if (RE_TASK.test(s)) router.push(`/tasks/${s.toUpperCase()}`);
+    else if (RE_COMPLAINT.test(s)) router.push(`/complaint/${s.toUpperCase()}`);
     else if (RE_WO.test(s)) router.push(`/rti?work_order_id=${s.toUpperCase()}`);
     else if (RE_ROAD.test(s)) router.push(`/road/${s.toUpperCase()}`);
     else router.push(`/ask?q=${encodeURIComponent(s)}`);
@@ -68,13 +72,19 @@ export default function Home() {
           </button>
         </form>
         <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
+          <Link href="/complaints/new" className="btn btn-primary !bg-white !text-ledger-900 hover:!bg-ledger-100">
+            {t("nav.raise")}
+          </Link>
+          <Link href="/complaints" className="btn btn-ghost !text-ink">
+            {t("home.seeComplaints")}
+          </Link>
           <button type="button" onClick={locate} className="btn btn-ghost !text-ink" disabled={locState === "busy"}>
             {locState === "busy" ? t("home.locating") : t("home.useLocation")}
           </button>
-          <label className="flex items-center gap-2">
+          <label className="flex min-w-0 max-w-full flex-wrap items-center gap-2">
             <span className="text-ledger-100">{t("home.pickWard")}</span>
             <select
-              className="min-h-[44px] rounded-md px-2 text-ink"
+              className="min-h-[44px] w-full min-w-0 max-w-full rounded-md px-2 text-ink sm:w-auto"
               defaultValue=""
               onChange={(e) => e.target.value && router.push(`/ward/${wardSlug(e.target.value)}`)}
             >

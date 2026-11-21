@@ -10,11 +10,17 @@ import db
 from agents import budget, noting
 from agents import facts as Fx
 from app import schemas
-from app.deps import actor, get_conn, lang_q, planner_ref, require_role
+from app.deps import get_conn, lang_q, planner_ref, require
+from live.common import Viewer
 from rules import promote as P
 from rules import text as T
 
-router = APIRouter(prefix="/api/officer", tags=["officer"], dependencies=[Depends(require_role("officer"))])
+router = APIRouter(prefix="/api/officer", tags=["officer"], dependencies=[Depends(require("officer"))])
+
+def _acting(v: Viewer) -> None:
+    if not v.can_act:
+        raise HTTPException(403, "This officer account is read-only (audit) and cannot change records.")
+
 
 _SEV = "CASE f.severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 WHEN 'low' THEN 2 ELSE 3 END"
 
@@ -85,7 +91,8 @@ def planner(ward: str, as_of: str | None = None, lang: str = Depends(lang_q), co
 
 
 @router.post("/draft-noting/{work_id}")
-def draft_noting(work_id: str, lang: str = "mr", conn=Depends(get_conn), who: str = Depends(actor)):
+def draft_noting(work_id: str, lang: str = "mr", conn=Depends(get_conn), v: Viewer = Depends(require("officer"))):
+    who = v.actor_ref
     d = noting.draft(conn, work_id, lang)
     if not d:
         raise HTTPException(404, "Unknown work order")
@@ -95,7 +102,9 @@ def draft_noting(work_id: str, lang: str = "mr", conn=Depends(get_conn), who: st
 
 
 @router.post("/reply")
-def add_reply(body: schemas.ReplyIn, conn=Depends(get_conn), who: str = Depends(actor)):
+def add_reply(body: schemas.ReplyIn, conn=Depends(get_conn), v: Viewer = Depends(require("officer"))):
+    _acting(v)
+    who = v.actor_ref
     f = db.one(conn, "SELECT * FROM finding WHERE finding_id=?", (body.finding_id,))
     if not f:
         raise HTTPException(404, "Unknown finding")
@@ -104,6 +113,17 @@ def add_reply(body: schemas.ReplyIn, conn=Depends(get_conn), who: str = Depends(
     db.log(conn, who, "right_of_reply_recorded", "finding", body.finding_id)
     conn.commit()
     return {"ok": True, "received_at": now}
+
+
+def _flush_in_tx(led: P.Ledger) -> None:
+    """Ledger.flush() commits; inside write_tx we insert without committing (write_tx commits once)."""
+    c = led.conn
+    c.executemany(
+        "INSERT INTO fact(fact_id,subject_type,subject_id,field_path,value_json,from_claim,source_doc,"
+        "source_row,promoted_by,promoted_at,supersedes,prev_hash,row_hash) VALUES "
+        "(:fact_id,:subject_type,:subject_id,:field_path,:value_json,:from_claim,:source_doc,"
+        ":source_row,:promoted_by,:promoted_at,:supersedes,:prev_hash,:row_hash)", led.facts)
+    led.facts = []
 
 
 @router.get("/review-queue")
@@ -115,25 +135,28 @@ def review_queue(status: str = "pending", limit: int = Query(50, le=200), offset
 
 
 @router.post("/review/{item_id}")
-def decide(item_id: str, body: schemas.DecisionIn, conn=Depends(get_conn), who: str = Depends(actor)):
+def decide(item_id: str, body: schemas.DecisionIn, conn=Depends(get_conn), v: Viewer = Depends(require("officer"))):
     """A named human promotes (or rejects) a queued claim. Append-only: promotion adds a new fact row."""
+    _acting(v)
     if body.action not in ("approve", "reject"):
         raise HTTPException(400, "action must be approve or reject")
-    q = db.one(conn, "SELECT * FROM review_queue WHERE item_id=?", (item_id,))
-    if not q or q["status"] != "pending":
-        raise HTTPException(404, "No such pending item")
-    claim = db.one(conn, "SELECT * FROM claim WHERE claim_id=?", (q["claim_id"],))
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    if body.action == "approve":
-        led = P.Ledger(conn, run_ts=now)
-        led.fact(claim["subject_type"], claim["subject_id"], claim["field_path"], json.loads(claim["value_json"]), who,
-                 from_claim=claim["claim_id"], source_doc=claim["source_doc"], source_row=claim["source_row"])
-        led.flush()
-        if claim["field_path"] == "category":
-            conn.execute("UPDATE parsed_complaint SET category_status='verified' WHERE complaint_id=?", (claim["subject_id"],))
-    conn.execute("UPDATE review_queue SET status=?, decided_by=?, decided_at=? WHERE item_id=?",
-                 ("approved" if body.action == "approve" else "rejected", who, now, item_id))
-    db.log(conn, who, f"review_{body.action}", "review_queue", item_id, {"note": body.note})
-    conn.commit()
+    who = v.actor_ref
+    # The write lock spans read-last-hash -> append, so concurrent approvals cannot fork the fact chain.
+    with db.write_tx(conn):
+        q = db.one(conn, "SELECT * FROM review_queue WHERE item_id=?", (item_id,))
+        if not q or q["status"] != "pending":
+            raise HTTPException(404, "No such pending item")
+        claim = db.one(conn, "SELECT * FROM claim WHERE claim_id=?", (q["claim_id"],))
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        if body.action == "approve":
+            led = P.Ledger(conn, run_ts=now)
+            led.fact(claim["subject_type"], claim["subject_id"], claim["field_path"], json.loads(claim["value_json"]), who,
+                     from_claim=claim["claim_id"], source_doc=claim["source_doc"], source_row=claim["source_row"])
+            _flush_in_tx(led)
+            if claim["field_path"] == "category":
+                conn.execute("UPDATE parsed_complaint SET category_status='verified' WHERE complaint_id=?", (claim["subject_id"],))
+        conn.execute("UPDATE review_queue SET status=?, decided_by=?, decided_at=? WHERE item_id=?",
+                     ("approved" if body.action == "approve" else "rejected", who, now, item_id))
+        db.log(conn, who, f"review_{body.action}", "review_queue", item_id, {"note": body.note})
     return {"ok": True, "status": "approved" if body.action == "approve" else "rejected", "decided_by": who}
 

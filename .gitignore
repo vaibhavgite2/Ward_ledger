@@ -2,6 +2,7 @@
 backend/.venv/
 backend/ward_ledger.db*
 backend/.cache/
+backend/instance/
 .venv/
 venv/
 *.egg-info/
@@ -16,6 +17,7 @@ htmlcov/
 # frontend (Next.js / Node)
 frontend/node_modules/
 frontend/.next/
+frontend/.next-*/
 frontend/out/
 frontend/next-env.d.ts
 frontend/*.tsbuildinfo
@@ -48,3 +50,6 @@ desktop.ini
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Playwright e2e output
+frontend/e2e-shots/

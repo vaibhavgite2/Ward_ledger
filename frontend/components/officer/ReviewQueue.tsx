@@ -36,7 +36,7 @@ export default function ReviewQueue({ onChange }: { onChange?: () => void }) {
     setBusy(id);
     setErr(null);
     try {
-      await api(`/officer/review/${id}`, { method: "POST", role: "officer", user: "ae-4471", body: { action, note: note || null } });
+      await api(`/officer/review/${id}`, { method: "POST", body: { action, note: note || null } });
       setDone(true);
       setNote("");
       reload();

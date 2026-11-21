@@ -1,22 +1,26 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { LANGS, useLang } from "@/lib/i18n";
-import { useRole, type Role } from "@/lib/role";
+import { homeFor, useAuth } from "@/lib/auth";
 
 export default function Shell({ children }: { children: ReactNode }) {
   const { t, lang, setLang } = useLang();
-  const { role, setRole } = useRole();
+  const { user, logout } = useAuth();
+  const router = useRouter();
   const nav: [string, string][] = [
     ["/", "nav.home"],
+    ["/complaints", "nav.complaints"],
     ["/map", "nav.map"],
     ["/wards", "nav.wards"],
     ["/contractors", "nav.contractors"],
     ["/ask", "nav.ask"],
     ["/rti", "nav.rti"],
   ];
-  if (role === "officer") nav.push(["/officer/K-E", "nav.officer"]);
-  if (role === "auditor") nav.push(["/audit", "nav.audit"]);
+  const panelLabel = user ? t(`nav.panel.${user.role}`) : "";
+  const unread = user?.unread_notifications ?? 0;
+  const canRaise = !user || user.role === "citizen";
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-2">
@@ -36,7 +40,17 @@ export default function Shell({ children }: { children: ReactNode }) {
                 {t(key)}
               </Link>
             ))}
+            {user?.role === "officer" && (
+              <Link href="/audit" className="rounded px-1.5 py-1 text-ink hover:bg-ledger-100">
+                {t("nav.audit")}
+              </Link>
+            )}
           </nav>
+          {canRaise && (
+            <Link href="/complaints/new" className="btn btn-primary !min-h-[36px] !px-3 text-xs">
+              {t("nav.raise")}
+            </Link>
+          )}
           <label className="flex items-center gap-1 text-xs">
             <span className="sr-only">{t("shell.language")}</span>
             <select
@@ -51,20 +65,35 @@ export default function Shell({ children }: { children: ReactNode }) {
               ))}
             </select>
           </label>
-          <label className="flex items-center gap-1 text-xs">
-            <span className="text-ledger-700">{t("shell.role")}</span>
-            <select
-              value={role}
-              onChange={(e) => setRole(e.target.value as Role)}
-              className="min-h-[36px] rounded border border-ledger-200 bg-white px-1"
-            >
-              {(["public", "officer", "auditor"] as Role[]).map((r) => (
-                <option key={r} value={r}>
-                  {t("role." + r)}
-                </option>
-              ))}
-            </select>
-          </label>
+          {user ? (
+            <div className="flex items-center gap-2 text-xs">
+              <Link href={homeFor(user)} className="btn btn-ghost !min-h-[36px] !px-2">
+                {panelLabel}
+                {unread > 0 && (
+                  <span className="ml-1 rounded-full bg-amber-500 px-1.5 text-[10px] font-bold text-white" aria-label={t("notif.unread", { n: unread })}>
+                    {unread}
+                  </span>
+                )}
+              </Link>
+              <span className="hidden text-ink/70 sm:inline" title={user.designation || ""}>
+                {user.display_name || user.login}
+              </span>
+              <button
+                type="button"
+                className="underline"
+                onClick={async () => {
+                  await logout();
+                  router.push("/");
+                }}
+              >
+                {t("auth.logout")}
+              </button>
+            </div>
+          ) : (
+            <Link href="/login" className="btn btn-ghost !min-h-[36px] !px-3 text-xs">
+              {t("auth.login")}
+            </Link>
+          )}
         </div>
       </header>
       <main id="main" className="mx-auto max-w-6xl px-3 py-4">

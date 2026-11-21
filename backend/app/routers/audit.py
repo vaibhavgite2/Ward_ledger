@@ -9,10 +9,11 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
 
 import db
-from app.deps import get_conn, require_role
+from app.deps import get_conn, require
+from live import events as LE
 from rules import promote as P
 
-router = APIRouter(prefix="/api/audit", tags=["audit"], dependencies=[Depends(require_role("auditor"))])
+router = APIRouter(prefix="/api/audit", tags=["audit"], dependencies=[Depends(require("officer"))])
 
 FACT_SQL = """
 SELECT f.seq, f.promoted_at ts, f.subject_type, f.subject_id, f.field_path, f.value_json value, f.promoted_by actor,
@@ -92,6 +93,20 @@ def export(format: str = "csv", ward: str | None = None, contractor: str | None 
                     headers={"Content-Disposition": "attachment; filename=ward-ledger-audit.csv",
                              "X-Chain-OK": str(v["ok"]).lower(), "X-Chain-Checked": str(v["checked"]),
                              "X-Rows": str(len(rows))})
+
+
+@router.get("/live")
+def live_log(entity: str | None = None, limit: int = Query(200, le=2000), offset: int = 0, conn=Depends(get_conn)):
+    """The complaint/task tracking log (ticket_event): append-only and hash-chained, raw rows."""
+    where, params = ("WHERE entity_id=?", [entity.strip().upper()]) if entity else ("", [])
+    total = db.one(conn, f"SELECT COUNT(*) n FROM ticket_event {where}", params)["n"]
+    rows = db.rows(conn, f"SELECT * FROM ticket_event {where} ORDER BY seq LIMIT ? OFFSET ?", params + [limit, offset])
+    return {"total": total, "items": rows}
+
+
+@router.get("/live/verify")
+def live_verify(conn=Depends(get_conn)):
+    return LE.verify(conn)
 
 
 @router.get("/{work_id}/chain")

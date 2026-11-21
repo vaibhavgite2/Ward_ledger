@@ -27,6 +27,23 @@ RULES = yaml.safe_load((BACKEND / "rules" / "config.yaml").read_text(encoding="u
 
 SYNTHETIC_NOTICE = "Demo data: all records are synthetic and all contractors are fictional."
 
+# Live operations (accounts, complaint tickets, tasks, uploads). Never touched by the analytics pipeline.
+INSTANCE_DIR = Path(os.environ.get("WL_INSTANCE_DIR", BACKEND / "instance"))
+UPLOAD_DIR = Path(os.environ.get("WL_UPLOAD_DIR", INSTANCE_DIR / "uploads"))
+SESSION_HOURS = {"citizen": 24 * 14, "officer": 12, "contractor": 24 * 3}
+
+# E-mail (complaint resolved -> citizen, overdue task -> contractor). With no WL_SMTP_HOST nothing leaves the machine:
+# messages are written to the `email_outbox` table with status 'logged' so the flow can be demonstrated and audited.
+SMTP_HOST = os.environ.get("WL_SMTP_HOST", "")
+SMTP_PORT = int(os.environ.get("WL_SMTP_PORT", "587"))
+SMTP_USER = os.environ.get("WL_SMTP_USER", "")
+SMTP_PASSWORD = os.environ.get("WL_SMTP_PASSWORD", "")
+SMTP_SECURITY = os.environ.get("WL_SMTP_SECURITY", "starttls")      # starttls | ssl | none
+MAIL_FROM = os.environ.get("WL_MAIL_FROM", "The Ward Ledger <no-reply@wardledger.example>")
+APP_URL = os.environ.get("WL_APP_URL", "http://localhost:3000").rstrip("/")   # base of the links inside e-mails
+# How often the API checks for tasks that missed their deadline (minutes; 0 turns the background check off).
+OVERDUE_CHECK_MINUTES = float(os.environ.get("WL_OVERDUE_CHECK_MIN", "15"))
+
 # CSV files that make up the source layer.
 SOURCE_FILES = [
     "work_orders", "complaints", "roads", "wards", "contractors", "rate_card",

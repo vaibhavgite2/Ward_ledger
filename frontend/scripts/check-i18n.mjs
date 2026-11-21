@@ -45,6 +45,10 @@ for (const f of files) {
     used++;
     if (![...base].some((k) => k.startsWith(m[1]))) fail(`${f.replace(root, "")}: no keys with prefix "${m[1]}"`);
   }
+  for (const m of src.matchAll(/\bt\(\s*`([A-Za-z0-9_.]+\.)\$\{/g)) {
+    used++;
+    if (![...base].some((k) => k.startsWith(m[1]))) fail(`${f.replace(root, "")}: no keys with prefix "${m[1]}" (template)`);
+  }
   for (const m of src.matchAll(/\["[^"]*",\s*"([a-z]+\.[A-Za-z0-9_.]+)"\]/g)) {
     used++;
     if (!base.has(m[1])) fail(`${f.replace(root, "")}: unknown key "${m[1]}" (in a table)`);

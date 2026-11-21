@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import { LangProvider } from "@/lib/i18n";
-import { RoleProvider } from "@/lib/role";
+import { AuthProvider } from "@/lib/auth";
 import Shell from "@/components/Shell";
 
 export const metadata: Metadata = {
@@ -13,12 +13,12 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="mr">
+    <html lang="en">
       <body>
         <LangProvider>
-          <RoleProvider>
+          <AuthProvider>
             <Shell>{children}</Shell>
-          </RoleProvider>
+          </AuthProvider>
         </LangProvider>
       </body>
     </html>

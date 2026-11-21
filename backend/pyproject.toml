@@ -12,6 +12,8 @@ dependencies = [
   "anthropic>=0.40",
   "pydantic>=2.9",
   "pyyaml>=6.0",
+  "pillow>=10.0",            # strips EXIF/GPS from public copies of complaint photos
+  "python-multipart>=0.0.9", # file uploads (complaints, repair evidence, bills)
 ]
 
 [project.optional-dependencies]

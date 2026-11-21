@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useApi } from "@/lib/api";
 import { useLang } from "@/lib/i18n";
 import { inr, rupee, wardCode, wardSlug } from "@/lib/format";
-import { useRole } from "@/lib/role";
+import { useAuth } from "@/lib/auth";
 import { BarList, ErrorBox, Loading, PageTitle, Progress, Stat } from "@/components/Ui";
 import FindingCard from "@/components/FindingCard";
 
@@ -27,7 +27,7 @@ export default function WardPage() {
   const code = wardCode(params.code);
   const slug = wardSlug(code);
   const { t } = useLang();
-  const { role } = useRole();
+  const { user } = useAuth();
   const trail = useApi<any>(`/wards/${slug}/money-trail`);
   const prio = useApi<any>(`/wards/${slug}/priorities?limit=12`);
   const [showAll, setShowAll] = useState(false);
@@ -202,7 +202,7 @@ export default function WardPage() {
         <button className="btn btn-primary" onClick={() => window.print()}>
           {t("ward.print")}
         </button>
-        {role === "officer" && (
+        {user?.role === "officer" && (
           <Link href={`/officer/${slug}`} className="btn btn-ghost">
             {t("nav.officer")}
           </Link>

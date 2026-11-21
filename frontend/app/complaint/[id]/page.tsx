@@ -56,6 +56,16 @@ export default function ComplaintPage() {
         <span className={`chip text-sm ${TONE[c.link_status] || TONE.pending}`}>{t("complaint.status." + c.link_status)}</span>
         <Source ev={c.provenance[0]} label={c.complaint_id} />
       </div>
+      <p className="mt-2 text-sm">
+        <span className="text-ink/60">{t("complaint.assignedTo")}: </span>
+        {w ? (
+          <Link href={`/contractor/${w.contractor_id}`} className="font-semibold underline">
+            {w.contractor_name}
+          </Link>
+        ) : (
+          <span className="text-ink/70">{t("complaint.notAssigned")}</span>
+        )}
+      </p>
 
       <section className="card mt-3 text-sm">
         <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
@@ -63,6 +73,14 @@ export default function ComplaintPage() {
           <dd>
             {dateOnly(c.received_at)} · {c.channel}
           </dd>
+          <dt className="text-ink/60">{t("common.section")}</dt>
+          <dd>{t("section." + (c.section || "roads"))}</dd>
+          {c.upvotes > 0 && (
+            <>
+              <dt className="text-ink/60">{t("ticket.supporters")}</dt>
+              <dd>▲ {c.upvotes}</dd>
+            </>
+          )}
           <dt className="text-ink/60">{t("complaint.category")}</dt>
           <dd>
             <strong>{c.category_label}</strong>
@@ -91,7 +109,11 @@ export default function ComplaintPage() {
         {c.events.map((e: any, i: number) => (
           <li key={i} className="relative">
             <span className="absolute -left-[22px] top-1.5 h-3 w-3 rounded-full border-2 border-ledger-600 bg-white" aria-hidden />
-            <div className="text-sm font-semibold">{t(evLabels[e.kind])}</div>
+            <div className="text-sm font-semibold">
+              {e.kind === "assigned" && e.contractor_name
+                ? t("complaint.ev.assignedTo", { name: e.contractor_name.replace(" (synthetic)", "") })
+                : t(evLabels[e.kind])}
+            </div>
             <div className="text-xs text-ink/70">
               {dateOnly(e.at)}
               {e.channel ? ` · ${e.channel}` : ""}

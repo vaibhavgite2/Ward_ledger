@@ -8,9 +8,10 @@ import mrO from "@/messages/officer.mr.json";
 import hiO from "@/messages/officer.hi.json";
 
 export type Lang = "mr" | "en" | "hi";
+export const DEFAULT_LANG: Lang = "en";
 export const LANGS: { code: Lang; label: string }[] = [
-  { code: "mr", label: "मराठी" },
   { code: "en", label: "English" },
+  { code: "mr", label: "मराठी" },
   { code: "hi", label: "हिन्दी" },
 ];
 const DICT: Record<Lang, Record<string, string>> = {
@@ -21,13 +22,13 @@ const DICT: Record<Lang, Record<string, string>> = {
 
 type Vars = Record<string, string | number | null | undefined>;
 const Ctx = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: (k: string, v?: Vars) => string }>({
-  lang: "mr",
+  lang: DEFAULT_LANG,
   setLang: () => {},
   t: (k) => k,
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("mr");
+  const [lang, setLangState] = useState<Lang>(DEFAULT_LANG);
   useEffect(() => {
     const l = localStorage.getItem("wl.lang") as Lang | null;
     if (l === "en" || l === "hi" || l === "mr") setLangState(l);

@@ -53,6 +53,8 @@ pushd "%BACKEND%"
 echo.
 echo === [5/7] Building the database (pipeline) ===
 "%VENV_PY%" -m pipeline.run --force || (popd & goto :fail)
+echo   Seeding demo login accounts and demo complaints (safe to re-run)...
+"%VENV_PY%" -m live.seed --demo --tickets || (popd & goto :fail)
 popd
 
 echo.
@@ -72,6 +74,7 @@ echo   Frontend : frontend\node_modules installed
 echo.
 echo   Run the API : cd backend ^&^& .venv\Scripts\python -m uvicorn app.main:app --port 8000
 echo   Run the UI  : cd frontend ^&^& npm run dev     (http://localhost:3000)
+echo   Demo logins : officer ae-4471, contractor ct05, citizen 9800000001 (password: wardledger-demo)
 echo   Optional    : set ANTHROPIC_API_KEY in the shell that runs uvicorn (see .env.example)
 echo.
 

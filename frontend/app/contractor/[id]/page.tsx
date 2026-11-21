@@ -6,6 +6,7 @@ import { useLang } from "@/lib/i18n";
 import { rupee, wardSlug } from "@/lib/format";
 import { ErrorBox, Loading, PageTitle } from "@/components/Ui";
 import { RULE_LABEL } from "@/lib/rules";
+import ScoreCard from "@/components/ScoreCard";
 
 /** Two bars for one measure: what happened vs what is expected for the same mix. Both values are printed. */
 function Compare({ title, actual, expected, suffix = "%", note }: { title: string; actual: number; expected: number; suffix?: string; note?: string }) {
@@ -47,6 +48,25 @@ export default function ContractorPage() {
   return (
     <div className="mx-auto max-w-4xl">
       <PageTitle sub={t("contractors.since", { y: c.empanelled_since })}>{c.name}</PageTitle>
+
+      <div className="mb-4 grid gap-4 md:grid-cols-[320px_1fr]">
+        <ScoreCard name={c.name} contractorId={c.contractor_id} score={c.score} linkName={false} />
+        {c.score && (
+          <section className="card text-sm">
+            <h2 className="mb-1 font-bold">{t("score.howTitle")}</h2>
+            <p className="leading-relaxed">
+              {t("score.howBody", {
+                d: c.score.weights.durability,
+                s: c.score.weights.sla,
+                b: c.score.weights.billing,
+                n: c.score.basis.repairs,
+                app: c.score.basis.app_tasks ? t("score.howApp", { n: c.score.basis.app_tasks }) : "",
+              })}
+            </p>
+            <p className="mt-2 text-xs text-ink/70">{t("score.replyNote")}</p>
+          </section>
+        )}
+      </div>
 
       <section className="card">
         <h2 className="mb-1 text-sm font-bold">{t("scorecard.title")}</h2>

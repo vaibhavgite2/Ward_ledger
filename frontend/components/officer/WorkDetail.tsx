@@ -16,7 +16,7 @@ function ReplyForm({ findingId, onSaved }: { findingId: string; onSaved: () => v
   const save = async () => {
     setErr(null);
     try {
-      await api("/officer/reply", { method: "POST", role: "officer", user: "ae-4471", body: { finding_id: findingId, reply_text: text } });
+      await api("/officer/reply", { method: "POST", body: { finding_id: findingId, reply_text: text } });
       setMsg(t("officer.reply.saved"));
       setText("");
       setOpen(false);

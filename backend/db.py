@@ -65,11 +65,27 @@ DERIVED_TABLES = [
 
 
 def connect(path=None) -> sqlite3.Connection:
-    conn = sqlite3.connect(str(path or config.DB_PATH), check_same_thread=False)
+    conn = sqlite3.connect(str(path or config.DB_PATH), check_same_thread=False, timeout=15)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
     conn.execute("PRAGMA foreign_keys=OFF")
+    conn.execute("PRAGMA busy_timeout=15000")
     return conn
+
+
+@contextmanager
+def write_tx(conn):
+    """BEGIN IMMEDIATE ... COMMIT. Takes SQLite's write lock *before* reading, so read-then-append
+    sequences (hash chains, ID counters, status transitions) cannot interleave between requests."""
+    if conn.in_transaction:
+        conn.commit()
+    conn.execute("BEGIN IMMEDIATE")
+    try:
+        yield conn
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
 
 
 @contextmanager
@@ -83,7 +99,12 @@ def tx(conn):
 
 
 def init_schema(conn: sqlite3.Connection) -> None:
+    from live.schema import LIVE_SCHEMA, MIGRATIONS      # live tables: created if missing, never dropped
     conn.executescript(SCHEMA)
+    conn.executescript(LIVE_SCHEMA)
+    for table, col, decl in MIGRATIONS:                  # older databases: add the columns introduced later
+        if col not in {r[1] for r in conn.execute(f"PRAGMA table_info({table})")}:
+            conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
     conn.commit()
 
 

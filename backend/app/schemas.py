@@ -41,14 +41,14 @@ class PublicFinding(BaseModel):
 
 class AskIn(BaseModel):
     question: str
-    lang: str = "mr"
+    lang: str = "en"
 
 
 class RtiIn(BaseModel):
     work_order_id: str | None = None
     complaint_id: str | None = None
     road_id: str | None = None
-    lang: str = "mr"
+    lang: str = "en"
 
 
 class ReplyIn(BaseModel):

@@ -1,15 +1,16 @@
 "use client";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import { useApi } from "@/lib/api";
 import { useLang } from "@/lib/i18n";
-import { useRole } from "@/lib/role";
 import { dateOnly, inr, wardCode, wardSlug } from "@/lib/format";
 import { ErrorBox, Loading } from "@/components/Ui";
 import WorkDetail from "@/components/officer/WorkDetail";
 import NotingEditor from "@/components/officer/NotingEditor";
 import ReviewQueue from "@/components/officer/ReviewQueue";
+import OfficerShell from "@/components/officer/OfficerShell";
+import { useAuth } from "@/lib/auth";
 
 const PAGE = 50;
 const SORTS = ["dlp", "sla", "findings", "recent", "cost"] as const;
@@ -37,12 +38,11 @@ type Row = {
 
 export default function OfficerWardPage() {
   const params = useParams<{ ward: string }>();
-  const router = useRouter();
   const { t } = useLang();
-  const { role } = useRole();
+  const { user } = useAuth();
   const code = wardCode(params.ward);
   const slug = wardSlug(code);
-  const ok = role === "officer";
+  const ok = user?.role === "officer";
 
   const [sort, setSort] = useState<(typeof SORTS)[number]>("dlp");
   const [rule, setRule] = useState<string | null>(null);
@@ -51,13 +51,10 @@ export default function OfficerWardPage() {
   const [noting, setNoting] = useState<string | null>(null);
   const [showQueue, setShowQueue] = useState(false);
 
-  const wards = useApi<any[]>(ok ? "/wards" : null);
   const works = useApi<{ total: number; items: Row[] }>(ok ? `/officer/works?ward=${slug}&sort=${sort}&limit=500` : null);
   const flags = useApi<{ counts: Record<string, number>; review_queue_pending: number }>(ok ? `/officer/flags?ward=${slug}&limit=1` : null);
 
-  if (!ok) {
-    return <p role="alert" className="card border-amber-300 bg-amber-50 text-sm">{t("officer.needRole")}</p>;
-  }
+  if (!ok) return <OfficerShell ward={params.ward}>{null}</OfficerShell>;
 
   const all = works.data?.items ?? [];
   const items = rule ? all.filter((r) => r.flags.some((f) => f.rule === rule)) : all;
@@ -68,28 +65,8 @@ export default function OfficerWardPage() {
   const err = works.error || flags.error;
 
   return (
-    <div className="text-sm">
+    <OfficerShell ward={params.ward}>
       <div className="mb-2 flex flex-wrap items-center gap-3">
-        <h1 className="text-xl font-extrabold">{t("officer.title", { code })}</h1>
-        <label className="flex items-center gap-1 text-xs">
-          {t("officer.selectWard")}
-          <select
-            value={code}
-            onChange={(e) => {
-              setSel(null);
-              setRule(null);
-              setPage(0);
-              router.push(`/officer/${wardSlug(e.target.value)}`);
-            }}
-            className="min-h-[36px] rounded border border-ledger-200 bg-white px-1"
-          >
-            {(wards.data ?? [{ ward_code: code, ward_name: "" }]).map((w) => (
-              <option key={w.ward_code} value={w.ward_code}>
-                {w.ward_code} {w.ward_name ? "· " + w.ward_name : ""}
-              </option>
-            ))}
-          </select>
-        </label>
         <Link href={`/officer/${slug}/budget`} className="btn btn-ghost !min-h-[36px] text-xs">
           {t("officer.budgetLink")}
         </Link>
@@ -254,6 +231,6 @@ export default function OfficerWardPage() {
           )}
         </div>
       )}
-    </div>
+    </OfficerShell>
   );
 }
