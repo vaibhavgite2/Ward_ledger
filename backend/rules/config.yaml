@@ -1,0 +1,76 @@
+# Thresholds for the rule engine (SPEC §6.4). Tune against the judges' answer key.
+version: "v1"
+
+rate_card_overrun:
+  ratio: 1.30            # cost / expected
+  ratio_relaxed: 1.40    # low-lying ward AND heavy-rain week
+  high_ratio: 1.60
+
+possible_double_billing:
+  window_days: 7         # second WO assigned within N days of the first one's completion
+
+sla:
+  medium_multiple: 2.0   # medium severity if actual hours >= 2x target
+
+failed_within_30d:
+  heavy_rain_week_days: 2   # >= N heavy-rain days in the week after completion -> lower severity
+
+estimate_drift:
+  ratio: 1.20
+  ratio_relaxed: 1.30
+  min_group: 5
+
+never_fixed:
+  open_statuses: ["Open", "In Progress"]
+
+clean_record:
+  min_completed: 3
+  min_sla_rate: 0.70     # city-wide SLA rate is ~50%, so 90% would certify nobody
+
+context:
+  low_lying_index: 0.6
+  heavy_rain_categories: ["Heavy", "Very heavy", "Extremely heavy"]
+  heavy_rain_days_in_week: 2
+  island_city_wards: ["A", "B", "C", "D", "E", "F/S", "F/N", "G/S", "G/N"]
+
+dedup:
+  radius_m: 150
+  window_hours: 48
+
+geocode:
+  gps_max_accuracy_m: 500
+  gazetteer_exact_m: 750
+  gazetteer_fuzzy_m: 1000
+  ward_centroid_m: 2000
+  fuzzy_accept: 85
+  fuzzy_review: 70
+  road_snap_min_m: 200
+
+budget:
+  allocation_cap: 0.80
+  hotspot_radius_m: 300
+  facility_radius_m: 250
+  rain_norm_mm: 300
+  weights: {S: 0.25, F: 0.20, R: 0.15, A: 0.15, P: 0.10, C: 0.10, D: 0.05}
+  dlp_discount: 0.5
+  hot_traffic_congestion: 6
+  category_severity:
+    "Road cave-in": 5
+    "Open or broken manhole": 5
+    "Waterlogging": 4
+    "Pothole": 3
+    "Choked drain / nullah overflow": 3
+    "Broken paver blocks": 2
+    "Other": 1
+
+promotion:
+  high_confidence: 0.85
+
+# Categories each repair method can address (used by the planner to pick a method).
+methods_by_category:
+  "Pothole": ["Cold mix patch", "Hot mix patch", "Mastic asphalt"]
+  "Road cave-in": ["Excavation, pipeline repair, PQC patch"]
+  "Waterlogging": ["Dewatering pump deployed", "Pump + debris removal", "Drain desilting"]
+  "Choked drain / nullah overflow": ["Drain desilting", "Desilting and garbage removal"]
+  "Open or broken manhole": ["Manhole cover replaced + grating"]
+  "Broken paver blocks": ["Paver blocks relaid"]

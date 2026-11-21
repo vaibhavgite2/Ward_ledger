@@ -1,0 +1,26 @@
+[project]
+name = "ward-ledger-backend"
+version = "1.0.0"
+description = "The Ward Ledger: claims-to-facts pipeline, rule engine and API (synthetic data)"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pandas>=2.2",
+  "shapely>=2.0",
+  "rapidfuzz>=3.9",
+  "anthropic>=0.40",
+  "pydantic>=2.9",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.27"]
+
+# The backend is run in place (python -m pipeline.run, uvicorn app.main:app), not installed as a
+# package. An empty package list stops setuptools failing on flat-layout auto-discovery.
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

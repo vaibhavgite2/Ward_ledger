@@ -1,0 +1,21 @@
+# dataset (fetched by scripts/fetch_data.sh; CC BY 4.0, not redistributed here)
+data/
+
+# backend
+backend/.venv/
+backend/ward_ledger.db*
+backend/.cache/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# frontend
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+
+# secrets
+.env
+.env.local
