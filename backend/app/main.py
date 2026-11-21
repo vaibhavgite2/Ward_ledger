@@ -37,9 +37,15 @@ async def lifespan(_app):
 app = FastAPI(title="The Ward Ledger API", version="1.0", lifespan=lifespan,
               description="Follow the rupee: Mumbai monsoon roads. " + config.SYNTHETIC_NOTICE)
 
-origins = [o.strip() for o in os.environ.get("WL_CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if o.strip()]
-app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["GET", "POST"],
-                   allow_headers=["*"], expose_headers=["X-Chain-OK", "X-Chain-Checked", "X-Rows"])
+origins = [o.strip() for o in os.environ.get("WL_CORS_ORIGINS", "*").split(",") if o.strip()]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"] if "*" in origins else origins,
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["X-Chain-OK", "X-Chain-Checked", "X-Rows"],
+)
 
 app.include_router(public.router)
 app.include_router(auth.router)
