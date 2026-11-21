@@ -307,7 +307,7 @@ Rules:
 | Warranty | # WOs billed on DLP roads | — |
 | Findings | Count by rule + clean-record wards | — |
 
-**No composite score, grade or rank** on public pages. Contractors are listed alphabetically. Sorting by a metric is allowed, with that metric visible.
+**Civic trust score (added on request).** Each contractor card shows one 0-100 score, computed deterministically in `agents/score.py` (no model writes or changes it): `40% x repairs that held beyond 30 days + 35% x jobs finished on time + 25% x bills within the standard rate`. Durability and on-time are context-adjusted (compared with what is expected for the same mix of urgent jobs, methods, low-lying wards and heavy-rain weeks; the card shows the job-weighted flood index). Tasks handled through the app count too: an approved task finished after its deadline, and a task still open past its deadline, count as not on time. Bands: 80+ "Reliable", 65-79 "Mixed record", below 65 "Below expected". The score is always shown with its three inputs, the weights and the sample size, and contractors keep their right of reply. **No letter grade, star rating or rank**: contractors are listed alphabetically; sorting by a metric is allowed, with that metric visible.
 
 **Narrative:** Claude Sonnet writes ≤ 120 words, citizen-readable, from a JSON of the metrics above. Prompt from [STARTER_IDEAS.md](STARTER_IDEAS.md#prompts-to-start-with) plus: "Use only the numbers provided; mention context adjustments; include one strength and one thing to improve; no accusations." Post-check: every number in the output must appear in the input JSON (§9.4).
 
@@ -479,7 +479,7 @@ For any narrative output: extract all numerals (incl. ₹, %, Devanagari digits 
 
 | Principle | Implementation |
 |---|---|
-| Facts, not verdicts | Template-rendered public finding text, banned-word test, no composite score or rank |
+| Facts, not verdicts | Template-rendered public finding text, banned-word test; the one contractor score is a published formula over recorded work, never a rank or grade |
 | Model never writes facts | Claude → `claim`; only rules/humans → `fact`; unverified claims labelled and excluded from findings |
 | Balance | Mandatory `clean_record` positive finding, strengths in every scorecard narrative |
 | Context before blame | Low-lying ward and heavy-rain-week adjustments on cost, durability and drift, shown in `context` |
@@ -569,7 +569,7 @@ Cut order if behind: social classifier → map colouring → audit verify → of
 1. A citizen enters complaint **BMC25-xxxxxx** (seeded: pothole, fix failed, road under DLP). The timeline shows the contractor, ₹ billed, "failed within 30 days", and "road under warranty, billed to BMC".
 2. Tap **Request documents (RTI)** → bilingual Section 6(1) draft, PIO, fee and due date → print.
 3. Ward page: "₹X of this ward's monsoon budget went to repairs that failed within 30 days". Then **What gets fixed next** with plain reasons (school, flood spot).
-4. Contractor page: fair scorecard with context adjustment and a clean-record badge in another ward. No grades.
+4. Contractor page: civic trust score with its three inputs, context adjustment and a clean-record badge in another ward. No grades or ranks.
 5. Switch role → officer: the same WO shows numbered risk flags → **Draft noting** → cited Marathi note-sheet. Switch to auditor: the same figure traces to the CSV row and sha256.
 
 ---
