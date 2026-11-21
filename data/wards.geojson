@@ -1,0 +1,986 @@
+{
+ "type": "FeatureCollection",
+ "name": "mumbai_wards_approx",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "A",
+    "ward_name": "Colaba, Fort, Churchgate",
+    "zone": "Zone 1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.805,
+       18.895
+      ],
+      [
+       72.84,
+       18.895
+      ],
+      [
+       72.85335,
+       18.93729
+      ],
+      [
+       72.84139,
+       18.93866
+      ],
+      [
+       72.80305,
+       18.93044
+      ],
+      [
+       72.799,
+       18.92799
+      ],
+      [
+       72.805,
+       18.895
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "B",
+    "ward_name": "Dongri, Masjid Bunder",
+    "zone": "Zone 1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.85335,
+       18.93729
+      ],
+      [
+       72.86457,
+       18.97279
+      ],
+      [
+       72.82383,
+       18.96374
+      ],
+      [
+       72.84139,
+       18.93866
+      ],
+      [
+       72.85335,
+       18.93729
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "C",
+    "ward_name": "Kalbadevi, Bhuleshwar, Marine Lines",
+    "zone": "Zone 1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80305,
+       18.93044
+      ],
+      [
+       72.84139,
+       18.93866
+      ],
+      [
+       72.82383,
+       18.96374
+      ],
+      [
+       72.82279,
+       18.96399
+      ],
+      [
+       72.80305,
+       18.93044
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "D",
+    "ward_name": "Grant Road, Malabar Hill, Tardeo",
+    "zone": "Zone 1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80039,
+       18.98595
+      ],
+      [
+       72.795,
+       18.95
+      ],
+      [
+       72.799,
+       18.92799
+      ],
+      [
+       72.80305,
+       18.93044
+      ],
+      [
+       72.82279,
+       18.96399
+      ],
+      [
+       72.81,
+       18.9836
+      ],
+      [
+       72.80039,
+       18.98595
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "E",
+    "ward_name": "Byculla, Agripada, Mumbai Central",
+    "zone": "Zone 1"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.86457,
+       18.97279
+      ],
+      [
+       72.8656,
+       18.97606
+      ],
+      [
+       72.82837,
+       18.99095
+      ],
+      [
+       72.81,
+       18.9836
+      ],
+      [
+       72.82279,
+       18.96399
+      ],
+      [
+       72.82383,
+       18.96374
+      ],
+      [
+       72.86457,
+       18.97279
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "F/S",
+    "ward_name": "Parel, Lalbaug, Sewri",
+    "zone": "Zone 2"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.8656,
+       18.97606
+      ],
+      [
+       72.87,
+       18.99
+      ],
+      [
+       72.88427,
+       18.99504
+      ],
+      [
+       72.84267,
+       19.02
+      ],
+      [
+       72.83502,
+       19.02019
+      ],
+      [
+       72.82837,
+       18.99095
+      ],
+      [
+       72.8656,
+       18.97606
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "F/N",
+    "ward_name": "Matunga, Sion, Wadala",
+    "zone": "Zone 2"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.88427,
+       18.99504
+      ],
+      [
+       72.90508,
+       19.00238
+      ],
+      [
+       72.87598,
+       19.04893
+      ],
+      [
+       72.87449,
+       19.04982
+      ],
+      [
+       72.85976,
+       19.04904
+      ],
+      [
+       72.84267,
+       19.02
+      ],
+      [
+       72.88427,
+       18.99504
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "G/S",
+    "ward_name": "Worli, Lower Parel, Prabhadevi",
+    "zone": "Zone 2"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80817,
+       19.0378
+      ],
+      [
+       72.80039,
+       18.98595
+      ],
+      [
+       72.81,
+       18.9836
+      ],
+      [
+       72.82837,
+       18.99095
+      ],
+      [
+       72.83502,
+       19.02019
+      ],
+      [
+       72.80822,
+       19.0378
+      ],
+      [
+       72.80817,
+       19.0378
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "G/N",
+    "ward_name": "Dadar West, Mahim, Dharavi",
+    "zone": "Zone 2"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80822,
+       19.0378
+      ],
+      [
+       72.83502,
+       19.02019
+      ],
+      [
+       72.84267,
+       19.02
+      ],
+      [
+       72.85976,
+       19.04904
+      ],
+      [
+       72.84503,
+       19.05693
+      ],
+      [
+       72.80822,
+       19.0378
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "H/E",
+    "ward_name": "Bandra East, Santacruz East, Khar East",
+    "zone": "Zone 3"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.86847,
+       19.09046
+      ],
+      [
+       72.84149,
+       19.09448
+      ],
+      [
+       72.84102,
+       19.09429
+      ],
+      [
+       72.84503,
+       19.05693
+      ],
+      [
+       72.85976,
+       19.04904
+      ],
+      [
+       72.87449,
+       19.04982
+      ],
+      [
+       72.86847,
+       19.09046
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "H/W",
+    "ward_name": "Bandra West, Khar West, Santacruz West",
+    "zone": "Zone 3"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80527,
+       19.09727
+      ],
+      [
+       72.81,
+       19.05
+      ],
+      [
+       72.80817,
+       19.0378
+      ],
+      [
+       72.80822,
+       19.0378
+      ],
+      [
+       72.84503,
+       19.05693
+      ],
+      [
+       72.84102,
+       19.09429
+      ],
+      [
+       72.80527,
+       19.09727
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "K/E",
+    "ward_name": "Andheri East, Vile Parle East, Jogeshwari East",
+    "zone": "Zone 3"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.88851,
+       19.15088
+      ],
+      [
+       72.85669,
+       19.14006
+      ],
+      [
+       72.84149,
+       19.09448
+      ],
+      [
+       72.86847,
+       19.09046
+      ],
+      [
+       72.88658,
+       19.09888
+      ],
+      [
+       72.8993,
+       19.12281
+      ],
+      [
+       72.88851,
+       19.15088
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "K/W",
+    "ward_name": "Andheri West, Juhu, Vile Parle West",
+    "zone": "Zone 4"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.80218,
+       19.15778
+      ],
+      [
+       72.8,
+       19.15
+      ],
+      [
+       72.80527,
+       19.09727
+      ],
+      [
+       72.84102,
+       19.09429
+      ],
+      [
+       72.84149,
+       19.09448
+      ],
+      [
+       72.85669,
+       19.14006
+      ],
+      [
+       72.80218,
+       19.15778
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "P/S",
+    "ward_name": "Goregaon",
+    "zone": "Zone 4"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.89007,
+       19.18218
+      ],
+      [
+       72.80594,
+       19.17121
+      ],
+      [
+       72.80218,
+       19.15778
+      ],
+      [
+       72.85669,
+       19.14006
+      ],
+      [
+       72.88851,
+       19.15088
+      ],
+      [
+       72.89782,
+       19.18145
+      ],
+      [
+       72.89007,
+       19.18218
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "P/N",
+    "ward_name": "Malad",
+    "zone": "Zone 4"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.81659,
+       19.20926
+      ],
+      [
+       72.80594,
+       19.17121
+      ],
+      [
+       72.89007,
+       19.18218
+      ],
+      [
+       72.81659,
+       19.20926
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "R/S",
+    "ward_name": "Kandivali",
+    "zone": "Zone 7"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.90952,
+       19.20975
+      ],
+      [
+       72.82087,
+       19.22452
+      ],
+      [
+       72.81659,
+       19.20926
+      ],
+      [
+       72.89007,
+       19.18218
+      ],
+      [
+       72.89782,
+       19.18145
+      ],
+      [
+       72.90098,
+       19.18512
+      ],
+      [
+       72.90952,
+       19.20975
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "R/C",
+    "ward_name": "Borivali",
+    "zone": "Zone 7"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.92148,
+       19.22941
+      ],
+      [
+       72.82726,
+       19.24736
+      ],
+      [
+       72.82087,
+       19.22452
+      ],
+      [
+       72.90952,
+       19.20975
+      ],
+      [
+       72.92148,
+       19.22941
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "R/N",
+    "ward_name": "Dahisar",
+    "zone": "Zone 7"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.92998,
+       19.2393
+      ],
+      [
+       72.88,
+       19.275
+      ],
+      [
+       72.835,
+       19.275
+      ],
+      [
+       72.82726,
+       19.24736
+      ],
+      [
+       72.92148,
+       19.22941
+      ],
+      [
+       72.92998,
+       19.2393
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "L",
+    "ward_name": "Kurla",
+    "zone": "Zone 5"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.88658,
+       19.09888
+      ],
+      [
+       72.86847,
+       19.09046
+      ],
+      [
+       72.87449,
+       19.04982
+      ],
+      [
+       72.87598,
+       19.04893
+      ],
+      [
+       72.90362,
+       19.07331
+      ],
+      [
+       72.88658,
+       19.09888
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "M/E",
+    "ward_name": "Govandi, Mankhurd, Deonar",
+    "zone": "Zone 5"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.91926,
+       19.00739
+      ],
+      [
+       72.955,
+       19.02
+      ],
+      [
+       72.97447,
+       19.09789
+      ],
+      [
+       72.96809,
+       19.09805
+      ],
+      [
+       72.91253,
+       19.07026
+      ],
+      [
+       72.91926,
+       19.00739
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "M/W",
+    "ward_name": "Chembur",
+    "zone": "Zone 5"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.90508,
+       19.00238
+      ],
+      [
+       72.91926,
+       19.00739
+      ],
+      [
+       72.91253,
+       19.07026
+      ],
+      [
+       72.90362,
+       19.07331
+      ],
+      [
+       72.87598,
+       19.04893
+      ],
+      [
+       72.90508,
+       19.00238
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "N",
+    "ward_name": "Ghatkopar, Vikhroli",
+    "zone": "Zone 6"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.8993,
+       19.12281
+      ],
+      [
+       72.88658,
+       19.09888
+      ],
+      [
+       72.90362,
+       19.07331
+      ],
+      [
+       72.91253,
+       19.07026
+      ],
+      [
+       72.96809,
+       19.09805
+      ],
+      [
+       72.8993,
+       19.12281
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "S",
+    "ward_name": "Bhandup, Powai, Kanjurmarg",
+    "zone": "Zone 6"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.97447,
+       19.09789
+      ],
+      [
+       72.98176,
+       19.12706
+      ],
+      [
+       72.90098,
+       19.18512
+      ],
+      [
+       72.89782,
+       19.18145
+      ],
+      [
+       72.88851,
+       19.15088
+      ],
+      [
+       72.8993,
+       19.12281
+      ],
+      [
+       72.96809,
+       19.09805
+      ],
+      [
+       72.97447,
+       19.09789
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "ward_code": "T",
+    "ward_name": "Mulund",
+    "zone": "Zone 6"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       72.98176,
+       19.12706
+      ],
+      [
+       72.985,
+       19.14
+      ],
+      [
+       72.985,
+       19.2
+      ],
+      [
+       72.92998,
+       19.2393
+      ],
+      [
+       72.92148,
+       19.22941
+      ],
+      [
+       72.90952,
+       19.20975
+      ],
+      [
+       72.90098,
+       19.18512
+      ],
+      [
+       72.98176,
+       19.12706
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

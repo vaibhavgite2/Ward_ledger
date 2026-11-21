@@ -1,6 +1,3 @@
-# dataset (fetched by scripts/fetch_data.sh or setup.bat; CC BY 4.0, not redistributed here)
-data/
-
 # backend (Python)
 backend/.venv/
 backend/ward_ledger.db*

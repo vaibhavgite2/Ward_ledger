@@ -1,0 +1,11 @@
+repair_method,unit,standard_rate_inr
+Cold mix patch,per sqm,1800
+Hot mix patch,per sqm,2600
+Mastic asphalt,per sqm,4200
+Paver blocks relaid,per sqm,3000
+Dewatering pump deployed,per job,60000
+Drain desilting,per job,90000
+Pump + debris removal,per job,110000
+Manhole cover replaced + grating,per job,45000
+"Excavation, pipeline repair, PQC patch",per job,180000
+Desilting and garbage removal,per job,70000

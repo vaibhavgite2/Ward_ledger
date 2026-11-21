@@ -1,0 +1,29 @@
+hotspot_id,name,ward_code,lat,lon,flood_threshold_mm_per_day,tide_sensitive,avg_water_depth_cm,avg_recession_hours,pumping_station_nearby,years_flagged_last_5
+FH001,Hindmata Junction,F/S,19.0045,72.843,60,N,25,5.3,N,4
+FH002,"Gandhi Market, Kings Circle",F/N,19.0275,72.8575,100,N,21,5.5,N,3
+FH003,Sion Road No 24,F/N,19.041,72.862,80,Y,20,6.2,N,2
+FH004,Milan Subway,H/W,19.079,72.841,90,Y,46,7.1,N,2
+FH005,Andheri Subway,K/W,19.119,72.846,60,Y,40,7.4,Y,4
+FH006,Malad Subway,P/N,19.187,72.849,70,Y,47,3.4,N,4
+FH007,Dahisar Subway,R/N,19.25,72.859,120,Y,72,2.4,Y,4
+FH008,"Kurla LBS Marg, Kamani Junction",L,19.08,72.889,90,Y,39,7.4,N,4
+FH009,Kurla Station West,L,19.066,72.879,100,Y,73,7.7,N,2
+FH010,Parel TT,F/S,19.008,72.841,100,N,30,1.6,N,3
+FH011,Dadar TT Circle,F/N,19.018,72.847,60,Y,51,2.7,N,5
+FH012,Byculla Station West,E,18.977,72.832,100,N,21,5.4,Y,4
+FH013,Mumbai Central Nair Hospital stretch,E,18.971,72.821,60,N,49,6.5,N,2
+FH014,Khar Subway,H/W,19.071,72.842,70,N,41,2.0,N,3
+FH015,Kalanagar Junction,H/E,19.059,72.848,80,Y,55,2.3,N,3
+FH016,Chembur Shell Colony,M/W,19.048,72.896,100,Y,60,8.0,N,5
+FH017,Ghatkopar Andheri Link Road dip,N,19.092,72.905,90,Y,52,6.7,Y,2
+FH018,Bhandup Village Road,S,19.144,72.937,70,Y,20,7.9,N,4
+FH019,Saki Naka Junction,K/E,19.103,72.888,90,N,48,5.3,Y,2
+FH020,Wadala Bridge Bhakti Park,F/N,19.03,72.872,90,N,23,2.7,N,5
+FH021,Lalbaug Flyover underpass,F/S,18.994,72.834,60,Y,50,7.5,N,2
+FH022,Worli Naka,G/S,19.007,72.817,90,N,20,4.9,N,3
+FH023,Dharavi 90 Feet Road,G/N,19.044,72.854,120,N,32,3.1,Y,2
+FH024,Govandi Station Road,M/E,19.055,72.915,120,Y,47,4.8,N,5
+FH025,Mulund Check Naka,T,19.18,72.957,70,Y,66,3.1,Y,3
+FH026,Goregaon MG Road,P/S,19.165,72.845,120,Y,59,3.1,N,4
+FH027,Masjid Bunder East,B,18.952,72.838,80,Y,70,4.9,Y,2
+FH028,Marol Naka,K/E,19.11,72.879,120,N,59,2.7,N,2
